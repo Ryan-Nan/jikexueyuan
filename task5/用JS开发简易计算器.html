@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            padding:30px;
+        }
+        p{
+            color: #3e336e;
+            font-weight: bold;
+            font-size:28px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="数字" id="num1">
+    <select id="symbol">
+        <option value="+" selected>+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" placeholder="数字" id="num2">
+    <button onclick="Count()">=</button>
+    <p id="result"></p>
+
+<script>
+    function Count(){
+        var num1=document.getElementById("num1").value,
+                symbol=document.getElementById("symbol").value,
+                num2=document.getElementById("num2").value;
+        var numa=num1.trim(),numb=num2.trim(),sym=symbol.trim();
+
+        if(isNaN(numa)){
+            alert("请输入数字");
+            return;
+        }else if(isNaN(numb)){
+            alert("请输入数字");
+            return;
+        }
+        var result=0;
+        if(sym=="+"){
+            result=Number(numa)+Number(numb);/*强制转换成数字类型*/
+            result=parseFloat(result.toFixed(8));
+
+            document.getElementById("result").innerHTML=result;
+        }else if(sym=="-"){
+            result=numa-numb;
+            document.getElementById("result").innerHTML=result;
+        }else if(sym=="*"){
+            result=numa*numb;
+            result=parseFloat(result.toFixed(8));
+            document.getElementById("result").innerHTML=result;
+        }else if(sym=="/"){
+            if(numb==0){
+                alert("NO,能不为零");
+                return;
+            }
+            result=numa/numb;
+            document.getElementById("result").innerHTML=result;
+        }
+    }
+</script>
+</body>
+
+</html>

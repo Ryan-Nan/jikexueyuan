@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="输入你多少分" id="score">
+    <button onclick="Score()">查看你几等生</button>
+    <p id="result"></p>
+
+<script>
+
+    function Score(){
+        var myvalue=document.getElementById("score").value;
+        myvalue=myvalue.trim();
+        if(myvalue==""){
+            alert("你输入了空格，请输入数字");
+            return;
+        }else if(isNaN(myvalue)){
+            alert("请输入数字，不是汉字和字母");
+            return;
+        }
+        var x=parseInt(myvalue/10),input;
+        switch(x){
+            case 10:input="1等生，厉害了我的哥（姐）";
+                break;
+            case 9:input="1等生，厉害了我的哥（姐）";
+                break;
+            case 8:input="2等生，Good";
+                break;
+            case 7:input="3等生，还行";
+                break;
+            case 6:input="4等生,努力啊";
+                break;
+            case 5:input="5等生";
+                break;
+            case 4:input="6等生";
+                break;
+            case 3:input="7等生";
+                break;
+            case 2:input="8等生";
+                break;
+            case 1:input="9等生";
+                break;
+            case 0:input="10等生";
+                break;
+            default:input="请输入1-100分，不要超过范围。";
+        }
+        document.getElementById("result").innerHTML=input;
+    }
+</script>
+</body>
+
+</html>
