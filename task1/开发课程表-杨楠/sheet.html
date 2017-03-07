@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>极客学院课程表</title>
+    <style>
+        table,th,td{
+            border:1px solid #ababab;
+        }
+        table{
+            border-collapse:collapse;
+            border: 2px solid #545469;
+            margin:60px auto;
+            font-family:"黑体",SimHei,sans-serif;
+            font-size:18px;
+            white-space:nowrap;/*添加white-space:nowrap;*/
+        }
+         caption{
+            margin-bottom:10px;
+            font-size: 1.4em;
+        }
+         th,td{
+             width:97px;
+             height:44px;
+             text-align: center;
+        }
+        th{
+            font-weight:bold;
+            font-size:1.1em;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>极客学院课程表</caption>
+        <thead>
+            <tr>
+                <th colspan="2">时间</th>
+                <th>星期一</th>
+                <th>星期二</th>
+                <th>星期三</th>
+                <th>星期四</th>
+                <th>星期五</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4">上午</td>
+                <td>1</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>语文</td>
+                <td>HTML</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>数学</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>css</td>
+                <td>网络</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>英语</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>英语</td>
+                <td>英语</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>数学</td>
+                <td>JavaScript</td>
+                <td>HTML5</td>
+            </tr>
+            <tr>
+                <td colspan="7">休息吧</td>
+            </tr>
+            <tr>
+                <td rowspan="2">下午</td>
+                <td>5</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>语文</td>
+                <td>HTML</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>语文</td>
+                <td>HTML</td>
+            </tr>
+
+        </tbody>
+        <!--下面添加了某某的制作-->
+        <tfoot>
+            <tr>
+                <td>Ryan的制作</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

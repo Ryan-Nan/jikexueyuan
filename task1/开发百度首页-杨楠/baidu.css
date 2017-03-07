@@ -1,0 +1,47 @@
+body{
+    font:12px arial;
+}
+
+header{
+    overflow: hidden;
+}
+
+header nav{
+    width:430px;
+    float: right;
+}
+
+header nav a{
+    margin-left:15px;
+}
+
+.content{
+    text-align: center;
+}
+.content img{
+    width:270px;
+    height:129px;
+}
+.content input{
+    width:540px;
+    height:36px;
+}
+.content button{
+    width:100px;
+    height:36px;
+}
+
+footer{
+
+    text-align: center;
+    margin-top:200px;
+}
+footer,footer a{
+    color: #545469;
+}
+.ft1 a{
+    margin-left:25px;
+}
+footer p img{
+    margin-bottom:-8px;
+}
