@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>制作一个由5个100100DIV组成的十字</title>
+    <style>
+        /*上下无法垂直居中，不知怎么做*/
+
+        .box_b,.box_p,.box_i,.box_g,.box_r{
+            width:100px;
+            height:100px;
+            margin:2px;
+        }
+        .box_b{
+            background-color: #326d96;
+            margin-left:106px;
+            box-shadow: 0 7px 7px 5px #ccc;
+            z-index: -1;
+        }
+
+        .box_p{
+            background-color: purple;
+            float: left;
+            box-shadow:7px 0 7px 5px #ccc;
+        }
+        .box_i{
+            margin-bottom:104px;
+            margin-left:104px;
+            /*background-image: url(html5_geek.png);
+            background-repeat:no-repeat;
+            background-position: center center;
+            -webkit-background-size:96px;
+            background-size:96px;*/
+            background-color: #fff;
+            box-shadow:2px -10px 24px 1px #858585 inset;
+            position: relative;
+        }
+        .box_i img{
+            width:24px;
+            height:24px;
+            position: absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+
+
+        }
+        .box_g{
+            background-color: green;
+            float: right;
+            box-shadow:-4px 0 7px 5px #ccc;
+        }
+        .box_r{
+            background-color: darkred;
+            float: right;
+            margin-right:104px;
+            box-shadow: 0 -4px 7px 5px #ababab;
+            z-index:-1;
+        }
+        .wrapper{
+            width:310px;
+            height:310px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top:-155px;
+            margin-left:-155px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box_b"></div>
+        <div class="box_p"></div>
+        <div class="box_g"></div>
+        <div class="box_r"></div>
+        <div class="box_i"><img src="html5_geek.png" alt="html5"></div>
+    </div>
+</body>
+</html>

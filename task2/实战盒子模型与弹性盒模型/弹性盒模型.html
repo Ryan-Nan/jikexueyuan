@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实战盒子模型与弹性盒模型</title>
+    <link rel="stylesheet" type="text/css" href="box.css">
+</head>
+<body>
+
+    <div class="col">
+        <img src="http://b.hiphotos.baidu.com/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=a8a10e3e293fb80e18dc698557b8444b/9f510fb30f2442a7707bffaad943ad4bd1130243.jpg" alt="web">
+        <p>2005年以后，互联网进入Web 2.0时代，各种类似桌面软件的Web应用大量涌现，网站的前端由此发生了翻天覆地的变化。网页不再只是承载单一的文字和图片，各种丰富媒体让网页的内容更加生动，网页上软件化的交互形式为用户提供了更好的使用体验，这些都是基于前端技术实现的。
+            随着Web 2.0概念的普及和W3C组织的推广，网站重构的影响力正以惊人的速度增长。XHTML+CSS布局、DHTML和Ajax像一阵旋风，铺天盖地席卷而来，包括新浪、搜狐、网易、腾讯、淘宝等在内的各种规模的IT企业都对自己的网站进行了重构。前端开发的入门门槛其实非常低，与服务器端语言先慢后快的学习曲线相比，前端开发的学习曲线是先快后慢。所以，对于从事IT工作的人来说，前端开发是个不错的切入点。[1]
+            也正因为如此，前端开发领域有很多自学成“才”的同行，但大多数人都停留在会用的阶段，因为后面的学习曲线越来越陡峭，每前进一步都很难。另一方面，正如前面所说，前端开发是个非常新的职业，对一些规范和最佳实践的研究都处于探索阶段。总有新的灵感和技术不时闪现出来，例如CSS sprite、负边距布局、栅格布局等；各种JavaScript框架层出不穷，为整个前端开发领域注入了巨大的活力；浏览器大战也越来越白热化，跨浏览器兼容方案依然是五花八门。为了满足“高可维护性”的需要，需要更深入、更系统地去掌握前端知识，这样才可能创建一个好的前端架构，保证代码的质量。</p>
+    </div>
+    <div class="box" id="horizontal">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="box" id="vertical">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex" >
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <!--正常盒子和怪异盒子对比-->
+    <div class="normal">
+        <div></div>
+    </div>
+    <div class="no_normal">
+        <div></div>
+    </div>
+<!--旧版弹性盒子居中布局-->
+    <div class="center">
+        <img src="http://b.hiphotos.baidu.com/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=a8a10e3e293fb80e18dc698557b8444b/9f510fb30f2442a7707bffaad943ad4bd1130243.jpg" alt="web">
+    </div>
+</body>
+</html>

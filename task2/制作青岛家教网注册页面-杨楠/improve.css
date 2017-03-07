@@ -1,0 +1,93 @@
+body{
+    margin:0;
+    padding:0;
+    background: #0d7791;
+}
+/*注册资料表*/
+.wrapper{
+    width:710px;
+    height:100%;
+    margin:10px auto;
+    background-color: #fff;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+    text-align: center;
+    
+}
+
+/*头部*/
+header{
+    width:652px;
+    margin:0 auto;
+    position: relative;
+    top:62px;
+}
+header img{
+    margin-left:-296px;
+    margin-top:-200px;
+}
+header a{
+    float: right;
+    margin-left:30px;
+    font-size:12px;
+}
+
+/*主要内容-表格*/
+.content span{
+    color: red;
+}
+span.blue,div.blue{
+    color: blue;
+}
+
+table thead th{
+    text-indent:2em;
+}
+.content table caption{
+    font-size:1.5em;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+.content table{
+    width:637px;
+    font-size:13px;
+    border-collapse: collapse;
+    margin:0 auto;
+    text-align: left;
+    margin-top:82px;
+}
+.content table,th,.content td{
+    border:1px solid #000;
+}
+table td span{
+    color: #c00;
+}
+tr td:first-child{
+    width:117px;
+    height:100%;
+    text-align: right;
+    padding:10px 5px;
+}
+#center1,#center2,#center3,#center4{
+    text-align: center;
+
+}
+#center1,#center2,#center3{
+    color: #1e2d96;
+    background: #ccc;
+    font-weight:bolder;
+    font-size:16px;
+}
+#center4{
+    padding:30px;
+}
+table input[type=text]{
+    width:260px;
+}
+/*底部*/
+footer{
+    font-size: 12px;
+    padding-bottom:30px;
+    margin-top:10px;
+}

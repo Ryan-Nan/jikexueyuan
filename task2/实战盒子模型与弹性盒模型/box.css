@@ -1,0 +1,114 @@
+.col{
+    -moz-column-count:3;
+    -moz-column-gap:30px;
+    -moz-column-rule-style:solid;
+    -webkit-column-count:3;
+    -webkit-column-gap:30px;
+    -webkit-column-rule-style:solid;
+    column-count:3;
+    column-gap:30px;
+    column-rule-style:solid;
+
+}
+
+.box{
+    display: -moz-box;
+    display: -webkit-box;
+    width:900px;
+    height:300px;
+}
+#horizontal{
+    margin-top:30px;
+    -moz-box-orient:horizontal;
+    -webkit-box-orient:horizontal;
+}
+#vertical{
+    margin-top:50px;
+    -moz-box-orient:vertical;
+    -webkit-box-orient:vertical;
+}
+.box div:nth-child(1){
+    -moz-box-flex:1;
+    -webkit-box-flex: 1;
+    background: #adb0d6;
+}
+.box div:nth-child(2){
+    -moz-box-flex:2;
+    -webkit-box-flex: 2;
+    background: #5b58bd;
+}
+.box div:nth-child(3){
+    -moz-box-flex:3;
+    -webkit-box-flex: 3;
+    background: #4447de;
+}
+
+.flex{
+    margin-top:50px;
+    width:600px;
+    height:100px;
+    display: flex;
+    display: -webkit-flex;
+}
+.flex div:nth-child(1){
+    -webkit-flex:1;
+    flex:1;
+    background: #be9fb9;
+}
+.flex div:nth-child(2){
+    -webkit-flex:1;
+    flex:1;
+    background: #c841ae;
+}
+.flex div:nth-child(3){
+    -webkit-flex:1;
+    flex:1;
+    background: #bf13ad;
+}
+
+/*正常盒子和怪异盒子对比*/
+.normal{
+    width:200px;
+    height:200px;
+    padding:10px;
+    background: #15ab09;
+    margin-top:30px;
+    float: left;
+}
+.normal div{
+    width: 180px;
+    height:180px;
+    background: #9cf87b;
+}
+
+.no_normal{
+    width:200px;
+    height:200px;
+    padding:10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #15ab09;
+    margin-top:30px;
+    margin-left:400px;
+}
+.no_normal div{
+    width: 180px;
+    height:180px;
+    background: #9cf87b;
+}
+/*旧版弹性盒子居中布局*/
+.center{
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    width:500px;
+    height:500px;
+    background: #ced740;
+    margin:10px auto;
+    clear: both;
+}

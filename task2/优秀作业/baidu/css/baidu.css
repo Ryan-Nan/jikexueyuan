@@ -1,0 +1,299 @@
+@charset "utf-8";
+/* 设置字体及大小 */
+html,body{
+	height: 100%;/* 支持html的子元素高100% 外边距为0， 解决子元素设%不起作用*/
+}
+body{
+	margin:0;
+	padding:0;/*清除浏览器自带边距*/
+    font:12px arial;
+}
+input{
+	outline:none;/*取消input默认的外发光效果*/
+}
+.wrapper{
+	position:relative;
+	min-width:810px;
+	min-height:600px;
+	height:100%;
+}
+.header{
+	overflow:hidden;
+}
+.header .nav{
+	/*width:430px; 没必要设*/
+	float:right;
+	margin:19px 0 5px 0;
+	padding:0 142px 0 0;/* 是为了给更多产品留距离出来 */
+}
+.header .nav a{
+	margin-left:20px;
+	color:#333;
+	float:left;/* line-height没起到作用要设float */
+	font-size:13px;
+	font-weight:bold;
+	line-height:24px;
+}
+.header .nav a:hover{
+	color:#00c;
+}
+/* 设置下面的下拉菜单 */
+.setting-menu{
+	position:absolute;
+	width:52px;
+	height:24px;
+	right:70px;
+	text-align:center;
+	margin:0;
+}
+.header .setting-menu a{
+	margin:0;
+	text-decoration:none;
+}
+.setting-menu:hover .baidu-setting{
+	display:block;
+}
+.setting-menu .baidu-setting{
+	position:absolute;
+	top:25px;
+	left:-16px;
+	width:60px;
+	border:1px solid #ddd;
+	box-shadow:1px 1px 5px #ddd;
+	z-index:99;
+	display:none;
+}
+/* 目的让文本居中生效 */
+.setting-menu .baidu-setting a{
+	display:inline-block;
+	width:100%;
+	color:#333;
+}
+.setting-menu .baidu-setting a:hover{
+	background-color:#3385ff;
+	color:#fff;
+}
+/* icon-Triangle绘制 */
+.setting-menu .icon-Triangle{
+	top:-11px;
+	left:25px;
+	width:0;
+	height:0;
+	display:block;
+	position:absolute;
+	border:5px solid transparent;
+	border-style:dashed dashed solid dashed;
+	border-bottom-color:#d8d8d8;
+}
+/* 更多产品 */
+.header .nav .more{
+	position:absolute;
+	right:10px;
+	width:60px;
+	height:23px;
+	float:left;
+	color:#fff;
+	background:#38f;
+	line-height:24px;
+	font-size:13px;
+	text-align:center;
+	overflow:hidden;
+	border-bottom:1px solid #38f;
+	margin-left:19px;
+	margin-right:2px;
+	text-decoration:none;
+}
+.header .nav .more:hover{
+	color:#fff;
+}
+/* 更多产品侧边栏设置 */
+.more-product{
+	position:absolute;
+	top:0;
+	right:0;
+	height:100%;
+	min-height:600px;/* 防止因窗口小而不能更好显示 */
+	width:75px;
+	border-left:1px solid #ddd;
+	background-color:#f9f9f9;
+	z-index: 999;
+	display:none;	
+}
+.more-product ul{
+	padding: 0 5px 0 5px;
+	text-align:center;
+}
+.more-product ul li{
+	position:relative;
+	height:60px;
+	border-bottom:1px solid rgba(235,235,235,1.00);
+	list-style:none;
+}
+.more-product a{
+	color:#666;
+	text-decoration:none;
+}
+.more-product a:hover{
+	color:#666;
+	text-decoration:underline;
+}
+.more-product .more-sub-btn{
+	height:30px;
+	padding: 12px 0 0 0;
+}
+/* 侧边栏图片引入 */
+.more-product span{
+	display:block;
+	width:40px;
+	height:40px;
+	margin:0 auto;
+}
+.more-product .more-img-one{
+	margin:15px 0 -10px 12px;
+	background:url(../img/a.png) no-repeat;
+}
+.more-product .more-img-two{
+	margin:15px 0 -5px 18px;
+	background:url(../img/b.png) no-repeat;
+}
+.more-product .more-img-three{
+	margin:15px 0 0 15px;
+	background:url(../img/c.png) no-repeat;
+}
+.more-product .more-img-four{
+	margin:15px 0 0 18px;
+	background:url(../img/d.png) no-repeat;
+}
+.more-product .more-img-five{
+	margin:15px 0 0 15px;
+	background:url(../img/e.png) no-repeat;
+}
+.more-product .more-all{
+	padding: 15px 0 0 0;
+	border:none;
+	text-decoration:underline;
+}
+/* 主体部分信息 */
+.content{
+	position:relative;
+	top: 38.2%;
+	height:191px;
+	text-align:center;/* 居中效果只对行内元素有效果 */
+}
+/* 解决content被顶下去 */
+.content .search-form{
+	position:relative;
+	height:191px;
+	width:650px;
+	margin:0 auto;
+	top:-191px;
+}
+.content img{
+	width:270px;
+	height:129px;
+}
+/* class的权重要比标签input大*/
+.content .search-input{
+	width:539px;
+	height:28px;/* 浏览器给搜索框默认2px的边框 */
+	border:1px solid #ddd;
+	padding:3px 0 3px 7px;
+	border-right-width:0;
+	vertical-align:middle;
+}
+.content .search-input:hover{
+	border-color:#999 transparent #b3b3b3 #999;
+}
+.content .search-input:focus{
+	border-color:#4791ff transparent #4791ff #4791ff;
+}
+.content .search-btn{
+	width:100px;
+	height:36px;
+	margin:-5px;
+	color:#fff;
+	font-size:15px;
+	letter-spacing:1px;
+	background:#3385ff;
+	border:1px solid #2d78f4;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.content .search-btn:hover{
+	background-color:#317ef3;
+}
+.content form{
+	margin-top:30px;
+	position:relative;
+}
+/* 照相机图标设置 */
+.content .icon{
+	position:absolute;/* 设绝对定位要先看下它的父级,绝对定位是以它最近的设有定位方式的父级，做个参考布局 */
+	display:inline-block;
+	width:18px;
+	height:16px;
+	top:9px;
+	right:108px;
+	background:url(../img/f.png);
+}
+.content .icon:hover{
+	background:url(../img/x.png);
+}
+/* 底部部分信息 */
+.footer{ 
+    position:absolute; 
+	bottom:50px; 
+	padding-top:50px;
+	margin:0 auto; 
+	width:100%; 
+}
+.footerbox{  
+    width:670px;  
+	text-align:center; 
+	color:#666; 
+	margin:0 auto;
+}
+.txt{ 
+    float:left; 
+	text-align:left; 
+	color:#999; 
+	position:relative;
+}
+.img1{ 
+    position:absolute; 
+	left:325px; 
+	top:27px;
+}
+.img2{ 
+    position:absolute; 
+	left:0; top:53px;
+}	
+.line{ 
+    line-height:25px;
+}
+.pic{ 
+    display:inline-block; 
+	float:left;
+}
+.pic1{ 
+    float:left; 
+	margin:0 35px 0 10px;
+}
+.footer a{ 
+    color:#666;
+}
+.footer .icon-copy-right{
+	position:relative;
+	top:3px;
+	display:inline-block;
+	width:14px;
+	height:17px;
+	background:url(../img/h.png);
+}.footer .icon-copy-left{
+	position:relative;
+	top:3px;
+	display:inline-block;
+	width:14px;
+	height:17px;
+	background:url(../img/g.png);
+}				
