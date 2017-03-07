@@ -1,0 +1,122 @@
+/*镜头*/
+.wrap{
+    width: 100%;
+    height:500px;
+
+
+}
+/*舞台*/
+.box{
+    width:366px;
+    height:366px;
+    margin:100px auto;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    /*perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;*/
+
+    /*perspective-origin: 25% 75%;
+    -moz-perspective-origin: 25% 75%;
+    -webkit-perspective-origin: 25% 75%;*/
+
+    -webkit-transform-origin: 183px 183px 0;
+    transform-origin: 183px 183px 0;
+    /*perspective-origin: 50% -20%;*/
+
+    -webkit-animation:cubemove 5s ease infinite;
+    animation:cubemove 5s ease infinite;
+}
+@keyframes cubemove {
+    0%{
+        -webkit-transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+        -webkit-transform-origin:center center;
+        -moz-transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);;
+        -moz-transform-origin:center center;
+    }
+    100%{
+        -webkit-transform: rotateZ(180deg) rotateX(360deg) rotateY(180deg);
+        -webkit-transform-origin:center center;
+        -moz-transform: rotateZ(180deg) rotateX(360deg) rotateY(180deg);;
+        -moz-transform-origin:center center;
+    }
+}
+
+.one_yellow,
+.two_red,
+.three_blue,
+.four_green,
+.five_purple,
+.six_gray{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position: absolute;
+    /*top:50%;*/
+    /*left:50%;*/
+    margin:0;
+}
+/*物体*/
+/*物体表面九个小正方形*/
+.one_yellow div,
+.two_red div,
+.three_blue div,
+.four_green div,
+.five_purple div,
+.six_gray div{
+    width:120px;
+    height:120px;
+    border:1px solid #fff;
+    float: left;
+    margin:0;
+    -webkit-border-radius:18px;
+    -moz-border-radius:18px;
+    border-radius:18px;
+}
+.one_yellow div{
+    background-color: yellow;
+
+}
+.one_yellow{
+    -webkit-transform:rotateX(90deg)   translateZ(183px);
+    transform: rotateX(90deg) translateZ(183px);
+}
+.two_red div{
+    background-color:red;
+}
+.two_red{
+    -webkit-transform: translateZ(0) rotateY(90deg) ;
+    transform: translateZ(0) translateY(183px) rotateX(90deg) ;
+}
+.three_blue div{
+    background-color: blue;
+}
+.three_blue{
+    -moz-transform: rotateY(-90deg) translateZ(183px);
+    transform: rotateY(-90deg) translateZ(183px);
+}
+.four_green div{
+    background-color:lawngreen;
+}
+.four_green{
+    -webkit-transform: translateZ(0) rotateX(-90deg);
+    transform: translateZ(0) rotateZ(90deg) translateY(-183px) rotateX(-90deg);
+}
+.five_purple div {
+    background-color: purple;
+
+}
+.five_purple{
+    -webkit-transform: translateZ(183px)  rotateX(0deg);
+    transform: translateZ(183px)  rotateX(0deg);
+}
+.six_gray div{
+    background-color: darkgray;
+}
+.six_gray{
+    -webkit-transform: translateZ(-183px) rotateX(180deg);
+    transform: translateZ(-183px) rotateX(180deg);
+}

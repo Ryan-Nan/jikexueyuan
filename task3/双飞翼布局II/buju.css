@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    min-width:600px;
+}
+header{
+    width:100%;
+    font-size:24px;
+    font-family:"新宋体",sans-serif;
+    font-weight:bold;
+    height:40px;
+    padding-top:16px;
+    background-color: #e8e8e8;
+    margin-bottom:7px;
+}
+
+.wrap{
+    height: 100%;
+    /*padding-left:187px;*/
+    /*padding-right:187px;*/
+    overflow: hidden;
+    line-height:1.7em;
+}
+.main{
+    width:100%;
+    float: left;
+    margin-bottom:-9999px;
+    padding-bottom:9999px;
+}
+.content{
+    margin-left:187px;
+    margin-right:187px;
+
+    background: #e8e8e8;
+
+    margin-bottom:-9999px;
+    padding-bottom:9999px;
+}
+
+/*调整内部文章*/
+.main .content{
+    padding-top:12px;
+    padding-left:10px;
+}
+.main .content p{
+    margin:10px;
+}
+
+.wrap .left{
+    width:160px;
+    float: left;
+    /*position: relative;*/
+    /*left:-187px;*/
+    margin-left:-100%;
+    margin-bottom:-9999px;
+    padding-bottom:9999px;
+}
+.wrap .right{
+    width:160px;
+    float: right;
+    /*position: relative;*/
+    /*right:-187px;*/
+    margin-left:-100%;
+
+    margin-bottom:-9999px;
+    padding-bottom:9999px;
+}
+.left,.right{
+    padding:12px 10px;
+    background-color: #e8e8e8;
+}

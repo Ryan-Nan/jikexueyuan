@@ -1,0 +1,32 @@
+header,nav,footer{
+    display: block;
+}
+*body nav a{
+    color: #000 \9;
+}
+/*导航*/
+header nav a{
+    margin-left:13px\9;
+}
+.ie_denglu,.ie_set{
+    font-family:"微软雅黑",sans-serif;
+    font-weight:normal;
+}
+.ie_last{
+    background-color: #3384fd;
+    color: #fff;
+    padding:6px;
+    margin-bottom:;
+    display: inline-block;
+    font-weight:normal;
+}
+
+.content button{
+    border:0;
+    margin-bottom:-3px\9;
+    margin-bottom:-2px;
+    margin-left:9px\9;
+}
+.content form input{
+    margin-right:10px;
+}

@@ -1,0 +1,263 @@
+.huaban{
+    width:600px;
+    height:400px;
+    position: relative;
+    margin:30px auto;
+}
+/*face*/
+.face{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:5px solid black;
+    position: absolute;
+    top:190px;
+    left:78px;
+    z-index:1;
+}
+.eye{
+    width:10px;
+    height:16px;
+    border-radius:5px/8px;
+    background: #000;
+}
+.left{
+    position: absolute;
+    left:30px;
+    top:30px;
+}
+.right{
+    position: absolute;
+    left:70px;
+    top:30px;
+}
+.smile{
+    width:74px;
+    height:74px;
+    border:5px solid black;
+    clip:rect(35px 84px 84px 0);/*剪割*/
+    border-radius:50%;
+    position: absolute;
+    left:12px;
+    top:10px;
+}
+/*ear*/
+.cir{
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    background: #000;
+}
+.zhuzi{
+    width:5px;
+    height:56px;
+    background: #000;
+    position: absolute;
+    left:7px;
+    top:3px;
+}
+.left_ear{
+    position: absolute;
+    top:142px;
+    left:70px;
+    -webkit-transform: rotateZ(-30deg);
+    -moz-transform: rotateZ(-30deg);
+    -ms-transform: rotateZ(-30deg);
+    -o-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg);
+}
+.right_ear{
+    position: absolute;
+    top:142px;
+    left:186px;
+    -webkit-transform: rotateZ(30deg);
+    -moz-transform: rotateZ(30deg);
+    -ms-transform: rotateZ(30deg);
+    -o-transform: rotateZ(30deg);
+    transform: rotateZ(30deg);
+}
+/*body*/
+.body{
+    position: absolute;
+    top:170px;
+    left:167px;
+
+}
+.tuoyuan{
+    width:270px;
+    height:150px;
+    background: #fff;
+    border:5px solid black;
+    border-radius:50%;
+    overflow: hidden;
+    position: relative;
+    border-left-color:transparent;
+    left:-10px;
+}
+.tuoyuan div:first-child{
+    width:30px;
+    height: 200px;
+    border:40px solid transparent;
+    border-right-color:black;
+    border-top-right-radius:100% 60%;
+    border-bottom-right-radius:110% 60%;
+    position: absolute;
+    top:-63px;
+    left:20px;
+}
+.tuoyuan div:last-child{
+    width:30px;
+    height: 200px;
+    border:40px solid transparent;
+    border-right-color:black;
+    border-top-right-radius:100% 60%;
+    border-bottom-right-radius:110% 60%;
+    position: absolute;
+    top:-63px;
+    left:110px;
+}
+.tuoyuan div:nth-child(2){
+    width:136px;
+    height:136px;
+    border:5px solid #000;
+    border-radius:50%;
+    position: absolute;
+    left:-96px;
+    top:2px;
+}
+.weiba{
+    width:0;
+    height:0;
+    border:14px solid transparent;
+    border-left-color: #000;
+    border-left-width:45px;
+    position: absolute;
+    left:265px;
+    top:70px;
+}
+/*wing*/
+.wing1{
+    width:160px;
+    height:190px;
+    border:5px solid #000;
+    border-top-left-radius:80px;
+    border-top-right-radius:77px;
+    border-bottom-left-radius:110px 110px;
+    border-bottom-right-radius:60px 90px;
+    position: absolute;
+
+    left:210px;
+    -webkit-transform: rotateZ(-15deg);
+    -moz-transform: rotateZ(-15deg);;
+    -ms-transform: rotateZ(-15deg);;
+    -o-transform: rotateZ(-15deg);;
+    transform: rotateZ(-15deg);
+    z-index: -1;
+
+    -webkit-animation:wingmove1 3s ease infinite;
+    -moz-animation:wingmove1 3s ease infinite;
+    -ms-animation:wingmove1 3S ease infinite;
+    -o-animation:wingmov1e 3S ease infinite;
+    animation:wingmove1 3S ease infinite;
+}
+.wing2{
+    width:160px;
+    height:200px;
+    border:5px solid #000;
+    border-top-left-radius:76px 80px;
+    border-top-right-radius:80px 80px;
+    border-bottom-left-radius:90px 140px;
+    border-bottom-right-radius:80px 150px;/*底线做不出直线，该如何解决？*/
+    background-color: #fff;
+    position: absolute;
+    top: 2px;
+    left:250px;
+    -webkit-transform: rotateZ(22deg);
+    -moz-transform: rotateZ(22deg);;
+    -ms-transform: rotateZ(22deg);;
+    -o-transform: rotateZ(22deg);;
+    transform: rotateZ(22deg);
+    -webkit-animation:wingmove2 3s ease infinite;
+    -moz-animation:wingmove2 3s ease infinite;
+    -ms-animation:wingmove2 3S ease infinite;
+    -o-animation:wingmove2 3S ease infinite;
+    animation:wingmove2 3S ease infinite;
+}
+@keyframes wingmove1{
+    0%{
+        -webkit-transform: rotateZ(-15deg);
+        -moz-transform: rotateZ(-15deg);;
+        -ms-transform: rotateZ(-15deg);;
+        -o-transform: rotateZ(-15deg);;
+        transform: rotateZ(-15deg);
+
+        -webkit-transform-origin:bottom;
+        -moz-transform-origin: bottom;
+        -o-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+        transform-origin: bottom;
+    }
+    50%{
+        -webkit-transform-origin:bottom;
+        -moz-transform-origin: bottom;
+        -o-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+        transform-origin: bottom;
+
+        -webkit-transform: rotateX(180deg);
+        -moz-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+    100%{
+        -webkit-transform: rotateZ(-15deg);
+        -moz-transform: rotateZ(-15deg);;
+        -ms-transform: rotateZ(-15deg);;
+        -o-transform: rotateZ(-15deg);;
+        transform: rotateZ(-15deg);
+
+        -webkit-transform-origin:bottom;
+        -moz-transform-origin: bottom;
+        -o-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+        transform-origin: bottom;
+    }
+}
+@keyframes wingmove2 {
+    0%{
+        -webkit-transform: rotateZ(22deg);
+        -moz-transform: rotateZ(22deg);;
+        -ms-transform: rotateZ(22deg);;
+        -o-transform: rotateZ(22deg);;
+        transform: rotateZ(22deg);
+
+        -webkit-transform-origin:bottom;
+        -moz-transform-origin: bottom;
+        -o-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+        transform-origin: bottom;
+    }
+    50%{
+        -webkit-transform-origin:bottom;
+        -moz-transform-origin: bottom;
+        -o-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+        transform-origin: bottom;
+
+        -webkit-transform: rotateX(180deg);
+        -moz-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+    100%{
+        -webkit-transform: rotateZ(22deg);
+        -moz-transform: rotateZ(22deg);;
+        -ms-transform: rotateZ(22deg);;
+        -o-transform: rotateZ(22deg);;
+        transform: rotateZ(22deg);
+
+        -webkit-transform-origin:bottom;
+        -moz-transform-origin: bottom;
+        -o-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+        transform-origin: bottom;
+    }
+}

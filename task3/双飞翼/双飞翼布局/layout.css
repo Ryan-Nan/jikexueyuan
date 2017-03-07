@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "微软雅黑";
+    height: 100%;
+    min-width: 600px;
+}
+
+
+/* 导航栏样式 */
+
+header {
+    height: 80px;
+    background-color: #E3DAE6;
+    margin-bottom: 5px;
+}
+
+
+/* 主体样式 */
+
+article {
+    width: 100%;
+    overflow: hidden;
+}
+
+section {
+    float: left;
+    width: 100%;
+    min-height: 562px;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+
+/* 左侧栏样式 */
+
+.leftaside {
+    float: left;
+    width: 200px;
+    min-height: 562px;
+    background-color: #E3DAE6;
+    margin-left: -100%;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+
+/* 右侧栏样式 */
+
+.rightaside {
+    float: right;
+    width: 200px;
+    min-height: 562px;
+    background-color: #E3DAE6;
+    margin-left: -100%;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+
+/* 正文样式 */
+
+.mainbody {
+    margin-left: 205px;
+    margin-right: 205px;
+    min-height: 562px;
+    background-color: #E3DAE6;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+
+/* 版权样式 */
+
+footer {
+    height: 80px;
+    background-color: #E3DAE6;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+
+/*文字样式 */
+
+h1 {
+    line-height: 80px;
+}
+
+p {
+    letter-spacing: 2px;
+    text-align: left;
+    text-indent: 2em;
+    margin: 5px;
+    font-size: 18px;
+}
