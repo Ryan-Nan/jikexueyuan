@@ -1,0 +1,342 @@
+body{
+    font:12px arial;
+    margin:0;
+    padding:0;
+}
+.wrapper{
+    width:100%;
+
+}
+header{
+    overflow: hidden;
+}
+
+header nav{
+    width:500px;
+    float: right;
+    margin-top:15px;
+
+
+}
+
+header nav a{
+    margin-left:20px;
+    font-size:13px;
+    font-weight:bold;
+    color: #000;
+}
+header nav a:hover{
+    color: #295bfd;
+}
+header nav a:nth-child(7),nav a:nth-child(8){
+    font-family:"微软雅黑",sans-serif;
+    font-weight:normal;
+}
+
+
+nav>a:last-child{
+    display: inline-block;
+    padding:5px;
+    background-color: #3384fd;
+    color: #fff;
+    font-family: "Microsoft YaHei",sans-serif;
+    font-weight:normal;
+}
+
+/*二级菜单*/
+.set{
+    width:72px;
+    height:106px;
+    box-shadow:2px 1px 5px 1px #ccc;
+    position: absolute;
+    top:53px;
+    right:75px;
+    text-align: center;
+    display: none;
+}
+
+.set a{
+    display: inline-block;
+    font-size:12px;
+    font-weight:normal;
+    line-height:2.2em;
+    text-decoration: none;
+    color: #000;
+    margin-left:0;
+}
+.set a:hover{
+    width:100%;
+    color: #fff;
+    background: #3383fc;
+}
+header nav .set-down{
+    display: inline-block;
+    padding-bottom:20px;
+}
+
+
+header nav .set-down:hover ~.set{
+    display: block;
+}
+
+
+/*主体*/
+.content{
+    text-align: center;
+    
+}
+.content img{
+    width:270px;
+    height:129px;
+}
+.search_border{
+    display: inline-block;
+    width:540px;
+    height:36px;
+    border:1px solid #aaa;
+    position: relative;
+}
+.search_border:hover{
+    border:1px solid #3384fd;
+}
+
+.search_border input{
+    width:490px;
+    height:23px;
+    margin:5px;
+    margin-left:-30px;
+    border: 0 !important;/*没见效，问题是点击搜索框出现边框颜色，想禁止边框颜色*/
+}
+.tupian{
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    margin-top: -8px;
+    height: 16px;
+    width: 18px;
+    background-image: url(images/camera_new_679c15cc.png);
+    cursor: pointer;
+}
+.tupian:hover{
+    background-image: url(images/camera_new_679c15cc.png);
+    background-position: 0 18px;
+
+}
+.content button{
+    width:100px;
+    height:41px;
+    background-color: #3384fd;
+    color: #fff;
+    margin-left:-4px;
+    border:0;
+}
+
+/*底部*/
+footer{
+
+    text-align: center;
+    margin-top: 270px;
+
+}
+.tel_baidu,.nuomi,.copyright{
+    display: inline-block;
+    vertical-align: middle;
+}
+.tel_baidu,.nuomi{
+    width:141px;
+    text-align: left;
+
+}
+.tel_baidu .img1{
+    /*css背景插图失败，没见效，不明原因，求解。只能在html插图*/
+    background-image: url(images/zbios_a4b2d86f.png);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+
+    float: left;
+    margin-right:12px;
+
+}
+.img2{
+    /*插图失败*/
+    background-image: url(images/nuomi_510f7472.png);
+
+    margin-left:10px;
+    margin-right:12px;
+    float: left;
+}
+.tel_baidu p,.nuomi p{
+    font-weight:bold;
+}
+.tel_baidu span,.nuomi span{
+    color: #808080;
+}
+
+.copyright p{
+    margin:7px 0;
+
+}
+.copyright p:last-child{
+    text-align: left;
+    margin-left: 17px;
+}
+footer,footer a{
+    color: #545469;
+    
+}
+.ft1 a{
+    margin-left:25px;
+}
+footer p img{
+    margin-bottom:-8px;
+}
+.response-head,
+.response-icon,
+.news-img{
+    display:none;
+}
+.signin,
+.huanfu,
+.response-icon a{
+    text-decoration: none;
+}
+
+@font-face {font-family: 'iconfont';
+    src: url('images/iconf/iconfont.eot'); /* IE9*/
+    src: url('images/iconf/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('images/iconf/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('images/iconf/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('images/iconf/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:20px;font-style:normal;
+    color: #8c8c8c;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+/*Media query*/
+
+@media only screen and (max-width: 680px){
+    header nav,footer .tel_baidu,.nuomi{
+        display: none;
+    }
+    .content{
+        width:100%;
+        height:50%;
+        background-color: #f7f7f7;
+        margin-bottom: 10px;
+    }
+    .content .re-img img{
+        display: none;
+    }
+    .content .re-img{
+        width:260px;
+        height:120px;
+        margin:0 auto;
+        background-image: url(images/bd_response.png);
+        -webkit-background-size: 270px 129px;
+        background-size: 253px 114px;
+    }
+    .response-head,
+    .response-icon,
+    .news-img{
+        display:block;
+    }
+    .response-head{
+        text-align: right;
+    }
+    .response-head .signin,.huanfu{
+        margin:8px 13px 0 0;
+        display: inline-block;
+    }
+    form{
+        width:95%;
+        margin:0 auto;
+    }
+    .search_border {
+        width: 82%;
+        height: 38px;
+        background: #fff;
+    }
+    .search_border input{
+        width: 90%;
+        height: 70%;
+    }
+    .content button{
+        width:80px;
+        font-size:13px;
+    }
+    .response-icon{
+        width:90%;
+        height:50px;
+        margin:0 auto;
+        margin-bottom:20px;
+        padding:30px 0 27px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .response-icon a{
+        display: block;
+        float: left;
+        text-align: center;
+        width:38px;
+
+    }
+    .response-icon a:last-child{
+        margin-right:0;
+    }
+    .response-icon a i{
+        font:24px/1 iconfont;
+        color: #a1a1a1;
+        text-align: center;
+    }
+    .response-icon a p{
+        color: #666;
+        font-size:13px;
+        font-weight:bold;
+        text-align: center;
+        margin-top:10px;
+    }
+    /*新闻*/
+    .news-img{
+        width:90%;
+        margin:10px auto;
+    }
+    .news-img img{
+        width:32%;
+        height:23%;
+    }
+    .news-img p{
+        font-size:15px;
+        font-weight:bold;
+        margin:5px 0;
+        
+    }
+    .news-img span{
+        font-size:12px;
+        color: #898989;
+        display: block;
+        line-height:32px;
+    }
+    
+    footer .copyright #police{
+        text-align: center;
+    }
+
+}
+@media only screen and (max-width: 500px){
+    .search_border {
+        width: 72%;
+        height: 38px;
+        background: #fff;
+        position: relative;
+    }
+    .search_border input {
+        width: 80%;
+        height: 70%;
+    }
+}

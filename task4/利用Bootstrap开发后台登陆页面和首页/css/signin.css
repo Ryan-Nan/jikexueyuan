@@ -1,0 +1,79 @@
+body{
+
+}
+
+.signin{
+    width:360px;
+    height:300px;
+    margin:150px auto;
+    border:1px solid #ccc;
+    box-shadow: 0 2px 15px #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.form-signin{
+    padding:28px 34px;
+}
+
+.input-prepend:first-child{
+    margin-bottom:20px;
+}
+.input-prepend .add-on{
+    background-color: #fff;
+    border-right:0;
+    height:28px;
+    line-height:28px;
+}
+.input-prepend .add-on .icon-user,
+.input-prepend .add-on .icon-lock{
+    /*缺点：无法改变图标大小*/
+    /*-webkit-background-size:;*/
+    /*background-size:;*/
+}
+.input-prepend input{
+    border-left:0;
+    width:130%;
+    height:28px;
+}
+.tag{
+    height: 50px;
+    border-bottom:1px solid #ddd;
+    padding-left:40px;
+}
+.tag a{
+    height:100%;
+    font-size:16px;
+    text-decoration: none;
+    color: #9c9c9c;
+    margin:0 28px;
+    line-height:50px;
+    display: inline-block;
+}
+.tag a:hover{
+    color: #000;
+    border-bottom:3px solid #464646;
+}
+/*修改复选框样式*/
+.wrap .checkbox{
+    padding:40px;
+    color: #2aa20d;/*靠，复选框无法修改样式，怎么破*/
+}
+.wrap{
+    height:30px;
+}
+
+.form-signin .wrap label{
+    display: inline-block;
+    margin-top:8px;
+    margin-left:10px;
+    color: #5ab45a;
+}
+
+.wrap a{
+    color: #898989;
+}
+.form-signin button{
+    margin-top:10px;
+}

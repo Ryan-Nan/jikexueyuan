@@ -1,0 +1,124 @@
+body{
+    min-width:768px!important;
+    margin:0;
+    padding:0;
+    margin-top:40px;
+}
+.wrap{
+    min-width:768px;
+    padding-left:200px;
+}
+.navbar-fixed-top{
+    height:90px;
+}
+
+.nav-header{
+    width:100%;
+    height:30px;
+    background-color: #3e336e;
+    color: #a5a7df;
+    text-align:right;
+}
+.nav-right{
+    font-size:13px;
+    font-weight:normal;
+    margin-right:30px;
+    line-height:40px;
+}
+
+.title{
+    width:100%;
+    height:45px;
+    background-color: #443f7c;
+}
+.title .title1{
+    margin-left: 8px;
+    font-size:17px;
+}
+/*修改图标*/
+.icon-home,.icon-list-alt{
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+}
+
+.title .title1 li{
+    color: #e8e8e8;
+    padding:0 16px;
+    line-height:40px;
+    margin-top:7px;
+}
+li.nav-active{
+    background-color: #e7e8ed;
+    color: #443f7c!important;
+    font-weight:bold;
+}
+
+.small-title .nav-tabs{
+    margin-left:-65px;
+    font-size:14px;
+}
+
+/*左则导航*/
+.nav-side{
+    margin-left:0;
+    width:200px;
+    height:500px;
+    padding-left:8px;
+    padding-right:8px;
+    padding-bottom:999px;
+    background-color: #e7e8ed;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.nav-side .navbar-left li{
+    width:182px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    
+}
+.nav-side .navbar-left li:hover{
+    background-color: #414da6;
+}
+.nav-side .navbar-left li a{
+    color: #443f7c;
+    padding-left:40px;
+    font-size:15px;
+}
+.nav-side .navbar-left li a:hover{
+    color: #fff;
+    text-shadow: none;
+}
+.nav-side .navbar-left li a.act{
+    color: #fff;
+    text-shadow: none;
+    background-color: #414da6;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.nav-side p{
+    font-size:16px;
+    position: absolute;
+    top:16px;
+    left:21px;
+}
+
+.page-wrapper{
+    width:80%;
+    height:100%;
+    margin-top:150px;
+    padding-left:20px;
+}
+.query .btn{
+    margin-top:-8px;
+}
+
+/*table*/
+.table thead tr{
+    background-color: #ddd;
+}
