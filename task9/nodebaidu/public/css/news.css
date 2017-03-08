@@ -1,0 +1,134 @@
+.first::before,
+.first::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+html{
+    font-size:62.5%;/*为什么设置为62.5%？？？*/
+    font-family:Arial,sans-serif;
+    height:100%;
+
+}
+body{
+    height:100%;
+}
+.container{
+    width:100%;
+    height:100%;
+}
+.action{
+    border-bottom:2px solid #fff;
+}
+a{
+    text-decoration: none;
+}
+/*reset emd*/
+
+header{
+    background: #4182f1 url("../img/bg-news-logo_344ce44.png") no-repeat center center;
+    -webkit-background-size:6rem;
+    background-size:6rem;
+}
+header a{
+    display: block;
+    height:4.8rem;
+    line-height: 4.8rem;
+    color: #fff;
+    margin:0 1rem;
+}
+header a.logo,
+header a.user{
+    float: left;
+    
+}
+header a.search,
+header a.more{
+    float: right;
+}
+header a .iconfont{
+    font-size:2rem;
+
+}
+
+nav{
+    background-color: #4182f1;
+}
+nav ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    font-size:0;
+}
+nav ul li{
+    display: inline-block;
+    width:16.66%;
+    font-size:1.65rem;
+    text-align: center;
+}
+
+nav a{
+    display: inline-block;
+    padding:0.9rem 0;
+    color: #fff;
+    border-bottom:2px solid transparent;
+}
+nav ul i{
+    display: inline-block;
+    height:1.5rem;
+    border-right:1px solid #459bee;
+    float: right;
+    position: relative;
+    top:1.1rem;
+}
+
+
+/*news-main*/
+.news-lists{
+    margin:1rem 0 0;
+    padding:0 1.3rem;
+}
+.news-list{
+    display: flex;
+    padding-bottom:0.5rem;
+    border-bottom:1px solid #e2e2e2;
+    margin-bottom:1.2rem;
+}
+.news-lists .news-content h1{
+    font-size: 1.7rem;
+    margin-top:0.1rem;
+    height:3.2rem;
+    line-height:1.5rem;
+}
+.newsimg{
+    flex:1;
+}
+.newsimg img{
+    width:100%;
+    height:auto;
+}
+
+.news-content{
+    flex:2;
+    padding:0 0.9rem;
+    
+}
+.newstime{
+    color: #555;
+}
+.news-content span{
+    display: inline-block;
+    vertical-align: bottom;
+}
+.news-content span.newssrc{
+    margin:0 0.5rem;
+    border:1px solid #f03f40;
+    line-height:normal;
+    color: #ff0000;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    padding:1px;
+    position: relative;
+    bottom:-4px;
+}
