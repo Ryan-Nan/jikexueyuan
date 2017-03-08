@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="huanfu.css">
+    <script src="storage.js"></script>
+</head>
+<body>
+<!--换肤界面容器-->
+    <div class="huanfu" id="down">
+        <div class="fu_top">
+            <div class="huanfu_menu">
+                <a href="" class="newpifu">最新推荐</a>
+                <div class="fu_use">
+                    <a href="#" id="hiddle">取消</a>
+                    <a href="#" class="savepifu" id="save">保存</a>
+                    <a href="#" id="nosave" class="no">不使用皮肤</a>
+                </div>
+            </div>
+        </div>
+        <!--换肤管理-->
+        <div class="fu_img" id="fu_img">
+            <a href="#">
+                <span>
+                    <img src="https://gss0.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/res/r/image/2016-04-11/e65c059f10263e729fac2cf2ed939905.jpg" alt="">
+                </span>
+                <span>最好的我们</span>
+            </a>
+            <a href="#">
+                <span>
+                    <img src="https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/res/r/image/2016-02-03/cea8bf87b2137abe411f4ffa33b01b3a.jpg" alt="">
+                </span>
+                <span>年兽大作战</span>
+            </a>
+            <a href="#">
+                <span>
+                    <img src="https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/res/r/image/2015-09-08/ac377af7f1ef6ce82474d491577db94d.jpg" alt="">
+                </span>
+                <span>碟中谍</span>
+            </a>
+            <a href="#">
+                 <span>
+                    <img src="https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/res/r/image/2015-03-19/ecb2919dbfdbf73e4f3db5cb7993f5d3.jpg" alt="">
+                </span>
+                <span>牛轰轰和大白</span>
+            </a>
+            <a href="#">
+                 <span>
+                    <img src="https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/res/r/image/2015-01-05/a62f5b7ab8cb1f31a7baf585535b7653.jpg" alt="">
+                </span>
+                <span>星星玉少年</span>
+            </a>
+            <a href="#">
+                <span>
+                <img src="https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/res/r/image/2014-11-25/858247e41415032ae9b11d9c52e36d5b.jpg" alt="">
+                </span>
+                <span>阿狸的秘密花园</span>
+            </a>
+        </div>
+    </div>
+    <!--内容主体-->
+    <div class="wrapper" id="mainbody">
+
+        <div class="nav">
+            <img class="img-hao" src="https://gss0.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/res/img/richanglogo168_24.png" alt="">
+            <a id="sethome" class="g-fc22 sethome" monkey="sethome" href="https://www.hao123.com/link/https/?key=http%3A%2F%2Fwww.hao123.com%2Fsethome&amp;1478251785&amp;c=333F45654A67CBB1DF2C3961B45EE162" hidefocus="true" style="left: 168px;" alog-custom="ck_url:XzFAHD7HiD-DcWCBn1n1wWfdPWRYfHmLfYFanRwAnbn1rHmkfWfdwRRkPWclwbTqnic_cbFKiRwNiRfBrBc1n1PAPjRvPHwKPWIjfbckwDmzf1n4PW7aPjN7wHDvnWGAw1YkcBsBpg0BrBckPa3kn1D8nH0vQWDdPBc_cMNzUaclcMILIz4CmytknWn8mvqVgatOnHfLrjcdnHT3Pic_cMwGUyN1IA7VTaclnHfLrjcvnHbdrgY,ck:8470.1321.259.258.31.259.116.517">
+                <span class="js_text">设为首页</span>
+            </a>
+            <a class="weather" href="">
+                <span>北京 <i></i></span>
+                <span>雾霾</span>
+                <span>晴</span>
+                <span>18~2 ℃</span>
+            </a>
+            <a class="date" href="">
+                <span>11月05日</span>
+                <span>周六</span>
+                <span>十月初六</span>
+            </a>
+            <div class="hao123-right">
+                <a href="" class="login"><i>&#xe604;</i>登录</a>
+                <a href="">网盘</a>
+                <a href="">邮箱</a>
+                <a href="">浏览器</a>
+                <a href="#" id="huanfu">换肤</a>
+                <a href="" class="biaoqing"><i>&#x3435;</i><span>啾啥啾没见过大牛</span></a>
+            </div>
+        </div>
+        <!--搜索框-->
+        <div class="hao123-search-box">
+            <a id="search_logolink" class="link link-hook" title="百度首页" href="https://www.hao123.com/link/https/?key=http%3A%2F%2Fwww.baidu.com%2F%3Ftn%3Dsitehao123&amp;1478251785&amp;c=333F45654A67CBB1DF2C3961B45EE162"><span class="color s-wea"></span></a>
+            <form action="">
+                <div class="input_search">
+                    <input type="text">
+                </div>
+                    <button>百度一下</button>
+            </form>
+        </div>
+        <!--放置新闻网站-->
+        <div class="news">
+            <ul class="">
+                <li class="link_1">
+                    <a href="" class="link-active">首页</a>
+                    <a href="">电视剧</a>
+                    <a href="">最新电影</a>
+                    <a href="">新闻头条</a>
+                    <a href="">八卦娱乐</a>
+                    <a href="">军事热点</a>
+                    <a href="">热门游戏</a>
+                    <a href="">小游戏</a>
+                    <a href="">今日特价</a>
+                    <a href="">特价旅游</a>
+                    <a href="">北京生活</a>
+                </li>
+                <li class="link_2">
+                    <a href="" class="quanwei">权威推荐 <span></span></a>
+                    <a href="">人民网</a>
+                    <a href="">新华网</a>
+                    <a href="">央视网</a>
+                    <a href="">国际在线</a>
+                    <a href="">中国日报网</a>
+                    <a href="">中国网</a>
+                    <a href="">中国经济网</a>
+                    <a href="">光明网</a>
+                    <a href="">央广网</a>
+                    <a href="">求是网</a>
+                    <a href="">中国青年网</a>
+                    <a href="">中国网信网</a>
+                </li>
+            </ul>
+        </div>
+        <div class="hao_body">
+            <div class="side">
+                <ul>
+                    <li>
+                        <a href="">电视剧</a>
+                        <span>|</span>
+                        <a href="">综艺</a>
+                    </li>
+                    <li>
+                        <a href="">游戏</a>
+                        <span>|</span>
+                        <a href="">小游戏</a>
+                    </li>
+                    <li>
+                        <a href="">电影</a>
+                        <span>|</span>
+                        <a href="">直播</a>
+                    </li>
+                    <li>
+                        <a href="">动画</a>
+                        <span>|</span>
+                        <a href="">漫画</a>
+                    </li>
+                    <li>
+                        <a href="">新闻</a>
+                        <span>|</span>
+                        <a href="">体育</a>
+                    </li>
+                    <li>
+                        <a href="">旅游</a>
+                        <span>|</span>
+                        <a href="">音乐</a>
+                    </li>
+                    <li>
+                        <a href="">彩票</a>
+                        <span>|</span>
+                        <a href="">股票</a>
+                    </li>
+                    <li>
+                        <a href="">搞笑</a>
+                        <span>|</span>
+                        <a href="">小说</a>
+                    </li>
+                    <li>
+                        <a href="">特价</a>
+                        <span>|</span>
+                        <a href="">手机</a>
+                    </li>
+                    <li> <a href="">教育</a>
+                        <span>|</span>
+                        <a href="">理财</a>
+                    </li>
+                </ul>
+                <div class="tool">
+                    <i></i>
+                    <a href="">天气</a>
+                    <a href="">星座</a>
+                    <a href="">娱乐</a>
+                    <a href="">军事</a>
+                    <a href="">体育</a>
+                </div>
+            </div>
+            <div class="main">
+                <div class="maimaimai">
+                    <ul>
+                        <li>
+                            <a href=""><i></i>百度•贴吧</a>
+                            <a href="">新浪•微博</a>
+                            <a href="">搜狗•热点</a>
+                            <a href="">腾讯</a>
+                            <a href="">网易</a>
+                            <a href="">优酷网</a>
+                        </li>
+                        <li>
+                            <a href="">天猫</a>
+                            <a href="">凤凰网</a>
+                            <a href="">淘宝网</a>
+                            <a href="">天猫双11</a>
+                            <a href="">4399游戏</a>
+                            <a href="">hao123影视</a>
+                        </li>
+                        <li>
+                            <a href="">京东商城</a>
+                            <a href="">苏宁易购</a>
+                            <a href="">今日特价</a>
+                            <a href="">国美在线</a>
+                            <a href="">汽车之家</a>
+                            <a href="">聚划算</a>
+                        </li>
+                        <li>
+                            <a href="">东方财富 理财</a>
+                            <a href="">58同城</a>
+                            <a href="">房天下</a>
+                            <a href="">携程旅行网</a>
+                            <a href="">免费游戏</a>
+                            <a href="">12306•旅游</a>
+                        </li>
+                        <li>
+                            <a href="">世纪佳缘</a>
+                            <a href="">赶集网</a>
+                            <a href="">易车网</a>
+                            <a href="">体育•NBA</a>
+                            <a href="">爱卡汽车</a>
+                            <a href="">萌主页•动漫</a>
+                        </li>
+                        <li>
+                            <a href="">世纪佳缘</a>
+                            <a href="">赶集网</a>
+                            <a href="">易车网</a>
+                            <a href="">体育•NBA</a>
+                            <a href="">爱卡汽车</a>
+                            <a href="">萌主页•动漫</a>
+                        </li>
+                        <li>
+                            <a href="">世纪佳缘</a>
+                            <a href="">赶集网</a>
+                            <a href="">易车网</a>
+                            <a href="">体育•NBA</a>
+                            <a href="">爱卡汽车</a>
+                            <a href="">萌主页•动漫</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bawan">
+                    <span>聚划算</span>
+                    <span>美肤预售</span>
+                    <span>洗车更省心</span>
+                    <span>创业好项目</span>
+                    <span>9块9包邮</span>
+                    <span>婚姻咨询</span>
+                    <span>福利网友</span>
+                    <span>理财赚钱</span>
+                </div>
+                <div class="maimaimai">
+                    <ul>
+                        <li>
+                            <a href=""><i></i>百度•贴吧</a>
+                            <a href="">新浪•微博</a>
+                            <a href="">搜狗•热点</a>
+                            <a href="">腾讯</a>
+                            <a href="">网易</a>
+                            <a href="">优酷网</a>
+                        </li>
+                        <li>
+                            <a href="">天猫</a>
+                            <a href="">凤凰网</a>
+                            <a href="">淘宝网</a>
+                            <a href="">天猫双11</a>
+                            <a href="">4399游戏</a>
+                            <a href="">hao123影视</a>
+                        </li>
+                        <li>
+                            <a href="">京东商城</a>
+                            <a href="">苏宁易购</a>
+                            <a href="">今日特价</a>
+                            <a href="">国美在线</a>
+                            <a href="">汽车之家</a>
+                            <a href="">聚划算</a>
+                        </li>
+                        <li>
+                            <a href="">东方财富 理财</a>
+                            <a href="">58同城</a>
+                            <a href="">房天下</a>
+                            <a href="">携程旅行网</a>
+                            <a href="">免费游戏</a>
+                            <a href="">12306•旅游</a>
+                        </li>
+                        <li>
+                            <a href="">世纪佳缘</a>
+                            <a href="">赶集网</a>
+                            <a href="">易车网</a>
+                            <a href="">体育•NBA</a>
+                            <a href="">爱卡汽车</a>
+                            <a href="">萌主页•动漫</a>
+                        </li>
+                        <li>
+                            <a href="">世纪佳缘</a>
+                            <a href="">赶集网</a>
+                            <a href="">易车网</a>
+                            <a href="">体育•NBA</a>
+                            <a href="">爱卡汽车</a>
+                            <a href="">萌主页•动漫</a>
+                        </li>
+                        <li>
+                            <a href="">世纪佳缘</a>
+                            <a href="">赶集网</a>
+                            <a href="">易车网</a>
+                            <a href="">体育•NBA</a>
+                            <a href="">爱卡汽车</a>
+                            <a href="">萌主页•动漫</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="huanfu.js"></script>
+
+</body>
+</html>
