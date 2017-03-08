@@ -1,0 +1,455 @@
+/*
+*body
+*/
+
+@mixin transition($val,$time){
+  -webkit-transition: $val $time;
+  -moz-transition: $val $time;
+  -ms-transition: $val $time;
+  -o-transition: $val $time;
+  transition: $val $time;
+}
+
+.jiuye{
+  width:1000px;
+  height:480px;
+  margin:20px auto;
+}
+.lunbotu{
+  width:750px;
+  height:330px;
+  @include float;
+}
+.owner,.know{
+  width:240px;
+  height:160px;
+  background-color: #fff;
+  @include float(right);
+}
+.owner{
+  margin-bottom:10px;
+  border:1px solid #e9e9e9;
+  @include boxsizing;
+  padding:26px 29px 24px;
+}
+
+.user{
+  a{
+    &:nth-child(1){
+      @include float;
+    }
+    img{
+      width:57px;
+      height:57px;
+    }
+
+  }
+  span,p{
+    font-size:12px;
+    color: #464646;
+    margin-left:17px;
+
+    display: inline-block;
+  }
+  span{
+    margin-top:10px;
+
+  }
+  p{
+    margin-top:9px;
+
+  }
+  margin-bottom:12px;
+}
+
+.owner{
+  .go{
+    width:83px;
+    height:32px;
+    border:1px solid #35b558;
+    display: inline-block;
+    text-align: center;
+    line-height:30px;
+    color: #35b558;
+    font-size:14px;
+
+    transition: all .3s;
+
+    &:hover{
+      color: #fff;
+      background: $hovercolor;
+    }
+  }
+
+}
+.space{
+  margin-right:4px;
+}
+
+/*就业班*/
+
+.jiuyeclass{
+  width:$width-full;
+  height:130px;
+  background: #fff;
+  clear: both;
+  margin-top:20px;
+  float: left;
+  a{
+    width:248px;
+    height:130px;
+    display: inline-block;
+    float:left;
+    border: 1px dotted #e8e8e8;
+    border-top:0;
+    border-bottom:0;
+    font-size:13px;
+    padding-top:90px;
+    text-align: center;
+    color: #464646;
+    @include transition(color,0.7s);
+
+    @include boxsizing;
+
+    &:hover{
+      color: $hovercolor;
+    }
+
+    &:nth-child(1){
+      position: relative;
+      overflow: hidden;
+      background: url(http://s1.jikexueyuan.com/index/images/jphp_d405f8a.png) no-repeat center 20px;
+      background-size: 130px 65px;
+    }
+    &:nth-child(2){
+      background: url(http://s1.jikexueyuan.com/index/images/jweb_95cd305.png) no-repeat center 20px;
+      background-size: 130px 65px;
+    }
+    &:nth-child(3){
+      background: url(http://s1.jikexueyuan.com/index/images/jandroid_aa0f1c1.png) no-repeat center 20px;
+      background-size: 130px 65px;
+    }
+    &:nth-child(4){
+      background: url(http://s1.jikexueyuan.com/index/images/jios_e6eb57b.png) no-repeat center 20px;
+      background-size: 130px 65px;
+      border-right:0;
+    }
+  }
+  i{
+    font-style:normal;
+    color: #e8e8e8;
+    background: #a3a3a3;
+    display: block;
+    width:90px;
+    height:18px;
+    text-align: center;
+    position: absolute;
+    top:12px;
+    left:-26px;
+    -webkit-transform: rotateZ(-45deg);
+    -moz-transform: rotateZ(-45deg);
+    -ms-transform: rotateZ(-45deg);
+    -o-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+  }
+
+}
+
+/*课程*/
+.course{
+  width:1000px;
+  height:270px;
+  margin:0 auto;
+  margin-top:20px;
+  a{
+    display: block;
+    width:233px;
+    margin-right:22px;
+    background-color: #fff;
+    float: left;
+    transition: box-shadow .3s;
+
+    &:hover{
+      -webkit-box-shadow:  0 2px 8px #cdcdcd;
+      -moz-box-shadow:  0 2px 8px #cdcdcd;
+      box-shadow:  0 2px 8px #cdcdcd;
+    }
+    img{
+      width:233px;
+      height:155px;
+    }
+    /*清除最后一个外边距*/
+    &:last-child{
+      margin:0;
+    }
+  }
+}
+
+.classcontent{
+  padding:0 7px 9px 15px;
+  p{
+    font-size:13px;
+    color: #414141;
+    &:first-child{
+      margin-bottom:24px;
+    }
+    &:nth-child(2){
+      margin-bottom:8px;
+    }
+  }
+  span{
+    font-size:12px;
+    color: #909090;
+  }
+  .orange{
+    font-size:18px;
+    color: #ff5415;
+  }
+  .delline{
+    text-decoration: line-through;
+  }
+}
+
+/*职业学院*/
+.job-school{
+  width:1000px;
+  height:310px;
+  margin:0 auto;
+  margin-top:40px;
+}
+.job_images{
+  width:100%;
+  height:100%;
+
+  a{
+    span{
+      width:100%;
+      display: inline-block;
+      position: absolute;
+      top:0;
+      left:0;
+      text-align: center;
+    }
+    i{
+      width:100%;
+      height:100%;
+      display: inline-block;
+      position: absolute;
+      top:0;
+      left:0;
+      background: rgba(0,0,0,0);
+      @include transition(background,.5s);
+
+    }
+    &:hover{
+      i{
+        background: rgba(0,0,0,.5);
+      }
+    }
+  }
+
+}
+
+.big_image {
+  width:500px;
+  height:270px;
+  position: relative;
+  @include float;
+  img{
+    width:500px;
+    height:270px;
+  }
+  a{
+    span{
+      color: #fff;
+      font-size:20px;
+      background: url(http://s1.jikexueyuan.com/index/images/cweb_2d70d0b.png) no-repeat center 70px;
+      padding-top:180px;
+      background-size:57px 90px;
+    }
+  }
+}
+
+.small_images{
+  width:490px;
+  height:270px;
+  margin-left:10px;
+  float: left;
+  a{
+    width:240px;
+    height:130px;
+    position: relative;
+    display: inline-block;
+    float: left;
+
+    img{
+      width:240px;
+      height:130px;
+    }
+    span{
+      font-size:14px;
+      color: #fff;
+      padding-top:87px;
+      background-size:36px 36px;
+    }
+  }
+  .ios{
+    span{
+      background: url(http://s1.jikexueyuan.com/index/images/cios_dc0ca8e.png) no-repeat center 30px;
+      background-size:32px 36px;
+    }
+  }
+}
+
+.python{
+  margin-right:10px;
+  margin-bottom:10px;
+  span{
+    background: url(http://s1.jikexueyuan.com/index/images/cpython_5ed9df4.png) no-repeat center 30px;
+  }
+}
+.GO{
+  margin:0;
+  margin-bottom:10px;
+  span{
+    background: url(http://s1.jikexueyuan.com/index/images/cgo_e66208d.png) no-repeat center 30px;
+  }
+}
+.ios{
+  margin-right:10px;
+}
+.more span{
+  background: url(http://s1.jikexueyuan.com/index/images/cmore_1bdb357.png) no-repeat center 30px;
+}
+
+/*会员课程*/
+.vip_course{
+  width:1000px;
+  height:420px;
+  margin:0 auto;
+  margin-top:40px;
+  margin-bottom:40px;
+
+  ul{
+    padding-left:0;
+
+    &:first-child{
+      margin-bottom:-10px;
+    }
+    li{
+      width:156px;
+      height:148px;
+      float: left;
+      display: inline-block;
+      margin-right:10px;
+      margin-bottom:10px;
+
+      a{
+        width:100%;
+        height:100%;
+        background-color: #fff;
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+        font-size:12px;
+        border:1px solid #ddd;
+        @include transition(box-shadow,0.4s);
+
+        &:hover{
+          box-shadow: 0 1px 5px #c3c3c3;
+        }
+        img{
+          padding-top:22px;
+          width:55px;
+          height:55px;
+        }
+        p{
+          color: #555;
+          margin-top:2px;
+          margin-bottom:6px;
+        }
+        span{
+          color: #35b558;
+        }
+      }
+    }
+
+
+  }
+  .all{
+    display: block;
+    width:120px;
+    height:32px;
+    font-size: 14px;
+    color: $hovercolor;
+    border:1px solid $hovercolor;
+    text-align: center;
+    margin:0 auto;
+    line-height:32px;
+    font-style: normal;
+    &:hover{
+      background: $hovercolor;
+      color: #fff;
+    }
+  }
+}
+
+/*学员故事*/
+.story{
+  width:1000px;
+  height:300px;
+  margin:0 auto;
+
+  div{
+    height:300px;
+    width:320px;
+    float: left;
+    margin-right:20px;
+    &:last-child{
+      margin:0;
+    }
+    p{
+      &:first-child{
+        background-color: #fff;
+        color: #555555;
+        font-size:12px;
+        width:318px;
+        height:119px;
+        box-sizing:border-box;
+        padding:18px 20px;
+        line-height:1.6em;
+      }
+    }
+
+    div{
+      width:320px;
+      height:80px;
+      img{
+        width:60px;
+        height:60px;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+        border-radius:50%;
+        float: left;
+        margin:10px 20px 0 18px;
+      }
+      p{
+        font-size:13px;
+        color: #555555;
+        padding-top:8px;
+        margin-bottom:5px;
+      }
+      span{
+        font-size:12px;
+        color: #a8a8a8;
+      }
+    }
+  }
+}
+
+.fuhao{
+  font-size:23px;
+  color: #ed523a;
+  font-weight:bold;
+}
+

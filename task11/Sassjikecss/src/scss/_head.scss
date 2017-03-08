@@ -1,0 +1,332 @@
+/*
+*head
+*/
+
+$width-full:100%;
+$minwidth:1000px;
+$baseheight:80px;
+
+header{
+  width: $width-full;
+  background-color: #fff;
+}
+@mixin image($url){
+  background: url("../images/#{$url}");
+}
+@mixin boxsizing{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.jk_banner{
+  width: $width-full;
+  min-width:$minwidth;
+  height:$baseheight;
+  background: url("../images/jbanner.jpg") no-repeat center gray;
+  background-size: 1920px 80px;
+  @include boxsizing;
+}
+
+.wrap_ba{
+  width:1000px;
+  height: $baseheight;
+  margin:0 auto;
+  position: relative;
+  font-family:"微软雅黑",sans-serif;
+  ul{
+    margin-left:170px;
+    li{
+      margin-right:10px;
+      display: inline-block;
+      width:178px;
+      height:49px;
+      background: radial-gradient(50% 98%, #eafffc 20%, #4c55ec 76%);
+      background: -moz-radial-gradient(50% 98%, #eafffc 20%, #4c55ec 76%);
+      background: -webkit-radial-gradient(50% 98%, #eafffc 20%, #4c55ec 76%);
+      background: -ms-radial-gradient(50% 98%, #eafffc 20%, #4c55ec 76%);
+      
+      a{
+        margin-right:10px;
+        display: inline-block;
+        width:178px;
+        height:49px;
+        color: #1e52ae;
+        line-height:49px;
+        font-size:18px;
+        text-align: center;
+        @include image('banner_a.png');
+        position: relative;
+        &:hover{
+          background: url("../images/banner_a.png") 0 49px;
+          background-color: rgba(248, 251, 253, 0.5);
+        }
+
+        span{
+          display: inline-block;
+          width:34px;
+          height:34px;
+          position: absolute;
+          left:0;
+        }
+      }
+    }
+  }
+  a{
+    .new{
+      @include image('newicon.png');
+    }
+    .hot{
+      @include image('hoticon.png');
+    }
+  }
+}
+
+.close{
+  position: absolute;
+  top:0;
+  right:0;
+  display: inline-block;
+  background: #a8a8a8;
+  width:18px;
+  height:18px;
+  font-size:22px;
+  line-height:14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+/*导航*/
+@mixin float($left:left){
+  float: $left;
+}
+nav{
+  width:1000px;
+  height:60px;
+  margin:0 auto;
+}
+.nav_left{
+  @include float;
+}
+.nav_right{
+  @include float(right);
+}
+.logo{
+  display: inline-block;
+  margin-top:10px;
+  @include float;
+  img{
+    width:109px;
+    height:40px;
+  }
+
+}
+.daohang{
+  display: inline-block;
+  margin-left:25px;
+  ul{
+    li{
+      margin-right:60px;
+      margin-top:5px;
+      font-size:14px;
+
+      .nav_home{
+        color: #15ab09;
+      }
+    }
+
+  }
+}
+
+/*二级菜单*/
+$hovercolor:#35b558;
+
+.school_menu,
+.vip_menu,
+.discussion_m{
+  cursor: pointer;
+  position: relative;
+  padding-bottom:30px;
+}
+.school_menu ul li,
+.vip_menu ul li,
+.discussion_m ul li{
+  clear: left;
+}
+.school_menu{
+  ul{
+    position: absolute;
+    top:40px;
+    width:284px;
+    height:264px;
+    background-color: #fff;
+    box-sizing:border-box;
+    overflow: hidden;
+    display: none;
+
+    li{
+      margin-left:-40px;
+      padding:6px 0 2px 0;
+
+      span{
+        background: #f5f5f5;
+        display: block;
+        width:280px;
+        height:28px;
+        line-height:28px;
+        padding-left:14px;
+        font-size:12px;
+        color: #464646;
+      }
+      a{
+        margin-left:38px;
+        font-size:13px;
+        color: #414141;
+
+        &:hover{
+          color: $hovercolor;
+        }
+      }
+    }
+
+  }
+
+}
+
+.vip_menu{
+  ul{
+    position: absolute;
+    top:40px;
+    width:280px;
+    height:260px;
+    background-color: #fff;
+    overflow: hidden;
+    display: none;
+
+    li{
+      margin-left:-40px;
+      padding:4px 0;
+
+      a{
+        display: block;
+        height:30px;
+        width:280px;
+
+        padding-left:40px;
+        line-height:30px;
+        font-size:12px;
+        color: #555555;
+
+        &:hover{
+          background-color: #f5f5f5;
+          color: $hovercolor;
+        }
+        span{
+          float: right;
+          margin-right:18px;
+          color: #a8a8a8;
+        }
+      }
+    }
+  }
+}
+
+.discussion_m{
+  ul{
+    position: absolute;
+    top:40px;
+    width:280px;
+    height:180px;
+    background-color: #fff;
+    padding:8px 0 6px 0;
+    overflow: hidden;
+    box-sizing:border-box;
+    display:none;
+
+    li{
+      margin:0;
+      a{
+        display: block;
+        width:280px;
+        height:40px;
+        line-height:40px;
+        font-size:12px;
+        color: #464646;
+        padding-left:40px;
+
+        &:hover{
+          background-color: #f5f5f5;
+          color: $hovercolor;
+        }
+      }
+    }
+  }
+}
+.school_menu:hover ul,
+.vip_menu:hover ul,
+.discussion_m:hover ul{
+  display: block;
+}
+
+.nav_right span{
+  display: inline-block;
+  width:17px;
+  height:60px;
+  margin-left:30px;
+  vertical-align: middle;
+  background-position: 0;
+  cursor: pointer;
+}
+
+@mixin bgicon($icon){
+  background: url("http://e.jikexueyuan.com/headerandfooter/images/#{$icon}.png") 0 0 no-repeat;
+  background-size:17px;
+}
+.search-icon{
+  @include bgicon(search-icon);
+}
+.app-icon{
+  @include bgicon(app-icon);
+  position: relative;
+}
+
+/*鼠标移过时下拉二维码下载图*/
+.app-icon{
+  .appimg{
+    width:120px;
+    position: absolute;
+    top:62px;
+    left:-50px;
+    display: none;
+
+    img{
+      width:120px;
+    }
+    i{
+      height:15px;
+      width:15px;
+      border-top:1px solid #dddddd;
+      border-left:1px solid #dddddd;
+      background: #fff;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      position: absolute;
+      top:-9px;
+      left:50px;
+    }
+  }
+  &:hover{
+    .appimg{
+      display: block;
+    }
+  }
+
+}
+
+.touxiang-icon{
+  @include bgicon(login-icon);
+  margin-right:8px;
+}

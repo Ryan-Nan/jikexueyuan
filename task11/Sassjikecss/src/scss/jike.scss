@@ -1,0 +1,32 @@
+
+body{
+  padding:0;
+  margin:0;
+  background-color: #f4f4f4;
+  min-width:1000px;
+}
+.wrap{
+  width:100%;
+  font-family:Verdana,"Lantinghei SC","Hiragino Sans GB","微软雅黑","Microsoft Yahei",Helvetica,arial,宋体,sans-serif;
+
+}
+
+ul{
+  list-style-type: none;
+  display: inline-block;
+}
+li{
+  float: left;
+}
+a{
+  text-decoration: none;
+}
+h3{
+  font-weight:normal;
+  color: #555;
+}
+
+@import "head";
+@import "body";
+@import "foot";
+
