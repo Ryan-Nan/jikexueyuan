@@ -1,0 +1,279 @@
+/**
+ * 使用设计模式改善下面代码
+ */
+
+////给右侧下拉菜单设置满屏高度
+//var side=document.getElementById("side");
+//side.style.height=$(window).height()-32+"px";
+//
+////用Jquery完成百度右侧下拉
+//$(".bri,.bri-side").hover(
+//    function(){
+//        $(".bri-side").show();
+//    },
+//    function(){
+//        $(".bri-side").hide();
+//    }
+//);
+
+/**
+ * js设计模式：单例模式
+ * 功能：右侧下来菜单
+ * */
+var rightmenu={
+  init:function(){
+      //给右侧下拉菜单设置满屏高度
+      var side=document.getElementById("side");
+      side.style.height=$(window).height()-32+"px";
+
+      //用Jquery完成百度右侧下拉
+      $(".bri,.bri-side").hover(
+          function(){
+              $(".bri-side").show();
+          },
+          function(){
+              $(".bri-side").hide();
+          }
+      );
+  }
+};
+
+//主页下面的切换Tab
+//addAction函数用来判断有没有类名action-tab
+/*function addAction(classname){
+    var nowclassname=$(classname).attr("class");
+    var attrs=document.getElementById("b_header").getElementsByTagName("span");
+    if(nowclassname.match("action-tab")!=null){
+        return false;
+    }else{
+
+        for(var i=0;i<attrs.length-1;i++){
+            //console.log(attrs[i].className);
+            if(attrs[i].className.match("action-tab")=="action-tab"){
+                attrs[i].className=attrs[i].className.replace(" action-tab","");
+            }
+        }
+        $(classname).attr("class",nowclassname+" action-tab");
+    }
+}*/
+
+//$("#tuijian").click(
+//
+//    function (){
+//        addAction("#tuijian");
+//        $("div.tuijian").css("display","block");
+//        $("div.guanzhu").css("display","none");
+//        $("div.navigation").css("display","none");
+//        $("div.video").css("display","none");
+//    }
+//
+//);
+//
+//$("#navigation").click(
+//
+//    function (){
+//        addAction("#navigation");
+//        $("div.tuijian").css("display","none");
+//        $("div.guanzhu").css("display","none");
+//        $("div.navigation").css("display","block");
+//        $("div.video").css("display","none");
+//    }
+//
+//);
+//$("#video").click(
+//
+//    function (){
+//        addAction("#video");
+//        $("div.tuijian").css("display","none");
+//        $("div.guanzhu").css("display","none");
+//        $("div.navigation").css("display","none");
+//        $("div.video").css("display","block");
+//    }
+//
+//);
+//$("#guanzhu").click(
+//
+//    function (){
+//        addAction("#guanzhu");
+//        $("div.tuijian").css("display","none");
+//        $("div.guanzhu").css("display","block");
+//        $("div.navigation").css("display","none");
+//        $("div.video").css("display","none");
+//    }
+//
+//);
+
+/*
+* js设计模式：单例模式
+* 功能：主页中间方框Tag切换
+* 作用：将这些代码组织得更为一致，从而使代码很容易阅读和维护
+* */
+var tabChange={
+    init:function(){
+        this.render();
+        this.bind();
+
+    },
+    render:function(){
+        var me=this;
+        me.tuijian=$("#tuijian");
+        me.navigation=$("#navigation");
+        me.video=$("#video");
+        me.guanzhu=$("#guanzhu");
+    },
+    bind:function(){
+        var me=this;
+        me.tuijian.click(function(){
+            me.addAction("#tuijian");
+            $("div.tuijian").css("display","block");
+            $("div.guanzhu").css("display","none");
+            $("div.navigation").css("display","none");
+            $("div.video").css("display","none");
+        });
+        me.navigation.click(function(){
+            me.addAction("#navigation");
+            $("div.tuijian").css("display","none");
+            $("div.guanzhu").css("display","none");
+            $("div.navigation").css("display","block");
+            $("div.video").css("display","none");
+        });
+        me.video.click(function(){
+            me.addAction("#video");
+            $("div.tuijian").css("display","none");
+            $("div.guanzhu").css("display","none");
+            $("div.navigation").css("display","none");
+            $("div.video").css("display","block");
+        });
+        me.guanzhu.click(function(){
+            me.addAction("#guanzhu");
+            $("div.tuijian").css("display","none");
+            $("div.guanzhu").css("display","block");
+            $("div.navigation").css("display","none");
+            $("div.video").css("display","none");
+        });
+    },
+
+    //addAction函数用来判断有没有类名action-tab,如没有就加
+    addAction:function(classname){
+        var nowclassname=$(classname).attr("class");
+        var attrs=document.getElementById("b_header").getElementsByTagName("span");
+        if(nowclassname.match("action-tab")!=null){
+            return false;
+        }else{
+
+            for(var i=0;i<attrs.length-1;i++){
+                //console.log(attrs[i].className);
+                if(attrs[i].className.match("action-tab")=="action-tab"){
+                    attrs[i].className=attrs[i].className.replace(" action-tab","");
+                }
+            }
+            $(classname).attr("class",nowclassname+" action-tab");
+        }
+    }
+};
+
+//tabChange.init();
+
+
+
+//换肤管理
+//conner定义一个状态
+//var conner;
+//$(".head-huanfu").on("mouseover",function(){
+//    conner=1;
+//});
+//$(".head-huanfu").on("mouseout",function(){
+//    conner=0;
+//});
+
+
+//$("#huanfu").click(function(){
+//    conner=1;
+//    $(".head-huanfu").slideDown("slow");
+//
+//})
+//$(".pull").click(function(){
+//    $(".head-huanfu").slideUp("fast");
+//})
+//$("body").click(function(){
+//    if(conner==0){
+//        $(".head-huanfu").slideUp("fast");
+//    }
+//})
+
+/**js设计模式：单例模式
+ * 功能：换肤管理
+ *
+ * */
+var skinManager={
+    init:function(){
+        var conner;
+        $(".head-huanfu").on("mouseover",function(){
+            conner=1;
+
+        });
+        $(".head-huanfu").on("mouseout",function(){
+            conner=0;
+
+        });
+
+        $("#huanfu").click(function(){
+        conner=1;
+        $(".head-huanfu").slideDown("slow");
+
+        });
+        $(".pull").click(function () {
+            $(".head-huanfu").slideUp("fast");
+        });
+        $("body").click(function () {
+            if (conner == 0) {
+                $(".head-huanfu").slideUp("fast");
+            }
+        });
+
+    }
+
+};
+
+//skinManager.init();
+
+
+//消息框
+//$("#info").click(function(){
+//    $(".info").toggle();
+//})
+
+/*
+* js设计模式：单例模式
+* 功能：消息框，点击时出现，再点击则消失
+* */
+var info={
+    init:function(){
+        this.render();
+        this.bind();
+    },
+    render:function(){
+        var me=this;
+        me.infomessage=$("#info");
+    },
+    bind:function(){
+        var me=this;        /*this 都是指向对象吗？如info对象*/
+        //console.log("me=this,me???"+me);
+        me.infomessage.click(function(){
+            $(".info").toggle();
+        });
+    }
+};
+
+
+/**
+ * js设计模式：外观模式
+ * 功能：程序开始
+ * 作用：网页加载依赖项按顺序载入，方便管理调度
+ * */
+var start=(function(){
+    rightmenu.init();
+    tabChange.init();
+    skinManager.init();
+    info.init();
+})();
