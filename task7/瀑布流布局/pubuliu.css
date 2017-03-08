@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+}
+.box{
+    position: relative;
+    float: left;
+}
+.content{
+    padding:7px;
+    border:1px solid #ccc;
+    -webkit-box-shadow: 0 0  3px gray;
+    -moz-box-shadow: 0 0  3px gray;
+    box-shadow: 0 0  3px gray;
+    border-radius: 5px;
+}
+.content img{
+    width:200px;
+    height:auto;
+}

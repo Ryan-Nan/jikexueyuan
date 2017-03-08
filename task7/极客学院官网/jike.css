@@ -1,0 +1,1406 @@
+body{
+    padding:0;
+    margin:0;
+    background-color: #f6f6f6;
+    min-width:1000px;
+}
+.wrap{
+    width:100%;
+    font-family:Verdana,"Lantinghei SC","Hiragino Sans GB","微软雅黑","Microsoft Yahei",Helvetica,arial,宋体,sans-serif;
+
+}
+dl,dd,ul li,
+span,
+input,
+a{
+    font-family:Verdana,"Lantinghei SC","Hiragino Sans GB","微软雅黑","Microsoft Yahei",Helvetica,arial,宋体,sans-serif;
+    margin:0;
+    padding:0;
+}
+h2{
+    box-sizing: border-box;
+    font-family: Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,宋体,sans-serif;
+}
+
+ul{
+    list-style-type: none;
+    display: inline-block;
+    margin:0;
+    padding:0;
+}
+li{
+    float: left;
+}
+em{
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}
+h3{
+    font-weight:normal;
+    color: #555;
+}
+/*头部*/
+header{
+    width:100%;
+    background-color: #fff;
+    border-bottom:1px solid #c6cad0;
+}
+.jk_banner{
+    width:100%;
+    min-width: 1000px;
+    height:80px;
+    background: url("images/jbanner.jpg") no-repeat center gray;
+    background-size: 1920px 80px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+.wrap_ba{
+    width:1000px;
+    height:80px;
+    margin:0 auto;
+    position: relative;
+    font-family:"微软雅黑",sans-serif;
+}
+.wrap_ba ul{
+
+    margin-left:170px;
+}
+.wrap_ba ul li{
+    margin-right:10px;
+    display: inline-block;
+    width:178px;
+    height:49px;
+    background: radial-gradient(50% 98%, #eafffc 20%, #4c55ec 76%);
+    background: -moz-radial-gradient(50% 98%, #eafffc 20%, #4c55ec 76%);
+    background: -webkit-radial-gradient(50% 98%, #eafffc 20%, #4c55ec 76%);
+    background: -ms-radial-gradient(50% 98%, #eafffc 20%, #4c55ec 76%);
+
+}
+.wrap_ba ul li a{
+    margin-right:10px;
+    display: inline-block;
+    width:178px;
+    height:49px;
+    color: #1e52ae;
+    line-height:49px;
+    font-size:18px;
+    text-align: center;
+    background-image: url(images/banner_a.png);
+    position: relative;
+}
+.wrap_ba ul li a:hover{
+    background: url("images/banner_a.png") 0 49px;
+    background-color: rgba(248, 251, 253, 0.5);
+}
+.wrap_ba li a span{
+    display: inline-block;
+    width:34px;
+    height:34px;
+    position: absolute;
+    left:0;
+}
+
+.close{
+    position: absolute;
+    top:0;
+    right:0;
+    display: inline-block;
+    background: #a8a8a8;
+    width:18px;
+    height:18px;
+    font-size:22px;
+    line-height:14px;
+    text-align: center;
+    cursor: pointer;
+}
+/*导航*/
+nav{
+    width:1000px;
+    height:60px;
+    margin:0 auto;
+    position: relative;
+}
+.nav_left{
+    float: left;
+}
+.nav_right{
+    float: right;
+}
+.logo img{
+    width:109px;
+    height:40px;
+}
+.logo{
+    display: inline-block;
+    margin-top:10px;
+    float: left;
+}
+.daohang{
+    display: inline-block;
+    margin-left:60px;
+}
+.daohang ul li{
+    margin-right:60px;
+    margin-top:5px;
+    font-size:14px;
+}
+.daohang ul li .nav_home{
+    color: #38393b;
+    line-height:50px;
+}
+/*二级菜单*/
+.daohang .school_menu,
+.daohang .vip_menu,
+.daohang .discussion_m{
+    cursor: pointer;
+    position: relative;
+    /*解决了鼠标往下面的二级菜单移动时候下拉菜单突然消失问题，耶*/
+    padding-bottom:7px;
+    line-height:50px;
+}
+.school_menu ul li,
+.vip_menu ul li,
+.discussion_m ul li{
+    clear: left;
+    
+}
+.school_menu i,
+.vip_menu i,
+.discussion_m i{
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border: 1px solid #c6cad0;
+    border-top: 0;
+    border-left: 0;
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+    margin-bottom:2px;
+    margin-left:1px;
+}
+.school_menu:hover i,
+.vip_menu:hover i,
+.discussion_m:hover i{
+    border-color: #35b458;
+    -webkit-transform: rotateZ(225deg);
+    -webkit-transform-origin:75% 75%;
+    -moz-transform: rotateZ(225deg);
+    -moz-transform-origin:75% 75%;
+    -ms-transform: rotateZ(225deg);
+    -ms-transform-origin:75% 75%;
+    -o-transform: rotateZ(225deg);
+    transform: rotateZ(225deg);
+    -webkit-animation: two 0.4s ease-in;
+    -moz-animation: two 0.4s ease-in;
+    -o-animation: two 0.4s ease-in;
+    animation: two 0.4s ease-in;
+}
+@keyframes two{
+    0%{
+        -webkit-transform: rotateZ(45deg);
+        -moz-transform: rotateZ(45deg);
+        -ms-transform: rotateZ(45deg);
+        -o-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+    }
+    100%{
+        -webkit-transform: rotateZ(225deg);
+        -webkit-transform-origin:75% 75%;
+        -moz-transform: rotateZ(225deg);
+        -moz-transform-origin:75% 75%;
+        -ms-transform: rotateZ(225deg);
+        -ms-transform-origin:75% 75%;
+        transform: rotateZ(225deg);
+    }
+}
+@-moz-keyframes two{
+    0%{
+        -webkit-transform: rotateZ(45deg);
+        -moz-transform: rotateZ(45deg);
+        -ms-transform: rotateZ(45deg);
+        -o-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+    }
+    100%{
+        -webkit-transform: rotateZ(225deg);
+        -webkit-transform-origin:75% 75%;
+        -moz-transform: rotateZ(225deg);
+        -moz-transform-origin:75% 75%;
+        -ms-transform: rotateZ(225deg);
+        -ms-transform-origin:75% 75%;
+        -o-transform: rotateZ(225deg);
+        transform: rotateZ(225deg);
+    }
+}
+@-webkit-keyframes two{
+    0%{
+        -webkit-transform: rotateZ(45deg);
+        -moz-transform: rotateZ(45deg);
+        -ms-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+    }
+    100%{
+        -webkit-transform: rotateZ(225deg);
+        -webkit-transform-origin:75% 75%;
+        -moz-transform: rotateZ(225deg);
+        -moz-transform-origin:75% 75%;
+        -ms-transform: rotateZ(225deg);
+        -ms-transform-origin:75% 75%;
+        transform: rotateZ(225deg);
+    }
+}
+@-o-keyframes two{
+    0%{
+
+        -o-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+    }
+    100%{
+
+        -o-transform: rotateZ(225deg);
+        -o-transform-origin:75% 75%;
+        transform: rotateZ(225deg);
+    }
+}
+
+.school_menu ul{
+    position: absolute;
+    top:56px;
+    width:284px;
+    height:264px;
+    background-color: #fff;
+    box-sizing:border-box;
+    overflow: hidden;
+    display: none;
+    z-index:599;
+    opacity:0;
+
+}
+.daohang .school_menu ul li{
+    padding:0;
+    margin:0;
+    width:280px;
+    display: inline-block;
+    line-height:28px;
+}
+.school_menu ul li span{
+    background: #fafafa;
+    display: block;
+    width:280px;
+    height:28px;
+    line-height:28px;
+    padding-left:14px;
+    font-size:12px;
+    color: #464646;
+}
+.school_menu ul li a{
+    margin-left:38px;
+    font-size:13px;
+    color: #414141;
+    width:280px;
+    height:28px;
+    display: inline-block;
+    padding:8px 0;
+}
+.school_menu ul li a:hover{
+    color: #35b558;
+}
+.vip_menu ul{
+    position: absolute;
+    top:56px;
+    width:280px;
+    height:260px;
+    background-color: #fff;
+    overflow: hidden;
+    display: none;
+    z-index:599;
+}
+.vip_menu ul li{
+    /*margin-left:-20px;*/
+    padding:4px 0;
+}
+.vip_menu ul li a{
+    display: block;
+    height:30px;
+    width:250px;
+    
+    padding-left:40px;
+    line-height:30px;
+    font-size:12px;
+    color: #555555;
+}
+.vip_menu ul li a:hover{
+    background-color: #f5f5f5;
+    color: #35b558;
+}
+.vip_menu li a span{
+    float: right;
+    margin-right:18px;
+    color: #a8a8a8;
+}
+
+.discussion_m ul{
+    position: absolute;
+    top:56px;
+    width:280px;
+    height:180px;
+    background-color: #fff;
+    padding:8px 0 6px 0;
+    overflow: hidden;
+    box-sizing:border-box;
+    display:none;
+    z-index:599;
+}
+.discussion_m ul li{
+    margin:0;
+}
+.discussion_m ul li a{
+    display: block;
+    width:280px;
+    height:40px;
+    line-height:40px;
+    font-size:12px;
+    color: #464646;
+    padding-left:40px;
+}
+.discussion_m li a:hover{
+    background-color: #f5f5f5;
+    color: #35b558;
+}
+.school_menu:hover ul,
+.vip_menu:hover ul,
+.discussion_m:hover ul{
+    display: block;
+    opacity:1;
+    -webkit-animation:fmyirst 0.3s ease-in;
+    -moz-animation:myfirst 0.3s ease-in;
+    -o-animation: myfirst 0.3s ease-in;
+    animation: myfirst 0.3s ease-in;
+}
+@keyframes myfirst{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@-moz-keyframes myfirst{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@-moz-keyframes myfirst{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@-o-keyframes myfirst{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.school_menu:hover,
+.vip_menu:hover,
+.discussion_m:hover{
+    color: #35b458;
+}
+.nav_right span{
+    display: inline-block;
+    width:17px;
+    height:60px;
+    margin-left:30px;
+    vertical-align: middle;
+    background-position: 0;
+    cursor: pointer;
+}
+.search-icon,
+.search-box i.searchbox{
+    background: url("http://e.jikexueyuan.com/headerandfooter/images/search-icon.png") 0 0 no-repeat;
+    background-size:17px;
+    
+}
+.app-icon
+{
+    background: url("http://e.jikexueyuan.com/headerandfooter/images/app-icon.png") 0 0 no-repeat;
+    background-size: 17px;
+    position: relative;
+}
+
+/*点击展开的搜索框*/
+.search-box{
+    position: absolute;
+    top:0;
+    left:160px;
+    width:734px;
+    height:60px;
+    z-index:200;
+    background-color: #fff;
+    display: none;
+}
+.search-box input#web-search{
+    border:0;
+    outline:0;
+    line-height:60px;
+    height:60px;
+    width:450px;
+    box-sizing:border-box;
+    font-size:13px;
+
+    color: #38393b!important;/*修改placeholder占位文本颜色无效，怎么办？？？已解决*/
+    margin-left:8px;
+}
+/* WebKit browsers */
+input::-webkit-input-placeholder{
+    color: #38393b;/*已解决*/
+}
+/* Firefox browsers */
+input:-moz-placeholder{
+    color: #38393b;
+}
+input::-moz-placeholder{
+    color: #38393b;
+}
+/* IE browsers */
+input:-ms-input-placeholder{
+    color: #38393b;/*已解决*/
+}
+
+.search-box .tagbox{
+    display: inline-block;
+    height:100%;
+    float: right;
+    margin-right:20px;
+}
+.search-box .tagbox a{
+    font-size:13px;
+    color: #999ca1;
+    background-color: #f4f4f4;
+    padding:3px 5px;
+    margin-right:5px;
+    line-height:60px;
+}
+.search-box i{
+    display: inline-block;
+    width:17px;
+    height:17px;
+    margin-bottom:-5px;
+}
+.search-box .close-search{
+    float: right;
+    width:15px;
+    height:15px;
+    background: url("http://e.jikexueyuan.com/headerandfooter/images/close-icon.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    margin-top:22px;
+    cursor: pointer;
+}
+
+/*二维码下载*/
+.app-icon .appimg{
+    width:120px;
+    position: absolute;
+    top:62px;
+    left:-50px;
+    display: none;
+    z-index:999;
+}
+.app-icon:hover .appimg{
+    display: block;
+}
+.app-icon .appimg img{
+    width:120px;
+}
+.app-icon .appimg i{
+    height:15px;
+    width:15px;
+    border-top:1px solid #dddddd;
+    border-left:1px solid #dddddd;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top:-9px;
+    left:50px;
+}
+
+.touxiang-icon{
+    background: url("http://e.jikexueyuan.com/headerandfooter/images/login-icon.png") 0 0 no-repeat;
+    background-size: 17px;
+    margin-right:8px;
+}
+
+/*主体*/
+.contain{
+    width:1000px;
+    height:100%;
+    margin:20px auto;
+    overflow: hidden;
+    zoom: 1;
+}
+/*左侧菜单*/
+.contain .side{
+    width:210px;
+    height:100%;
+    background-color: #fff;
+    float: left;
+}
+.side .kechengk{
+    width:210px;
+    height:426px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-top:1px solid #35b458;
+    border-bottom:1px solid #35b458;
+}
+.ke-head{
+    width:210px;
+    height:45px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left:11px;
+    border-bottom:1px solid #e2e2e2;
+    border-left:1px solid #35b458;
+    border-right:1px solid #35b458;
+}
+.ke-head i{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: url(http://s1.jikexueyuan.com/common/images/icon-course-curr_0743c98.png) no-repeat 0 0 / 15px 15px;
+    line-height:34px;
+}
+.ke-head span{
+    font-size:14px;
+    color: #35b458;
+    padding-left:6px;
+    line-height:46px;
+}
+
+.kechengk .ke-ul{
+    margin:0;
+    padding:0;
+    position: relative;
+}
+.kechengk .ke-ul li{
+    width:208px;
+    height:37px;
+    display: inline-block;
+    border-bottom:1px solid #f0f0f0;
+    border-left:1px solid #35b458;
+    border-right:1px solid #35b458;
+}
+.kechengk .ke-ul li:hover{
+    -webkit-box-shadow: -2px 0 4px #c6cad0;
+    -moz-box-shadow: -2px 0 4px #c6cad0;
+    box-shadow: -2px 0 4px #c6cad0;
+    border:1px solid #d0d4da;
+    border-top:0;
+}
+.kechengk .ke-ul li:last-child{
+    border-bottom:0;
+}
+.kechengk .ke-ul li>div{
+    width:172px;
+    height:35px;
+    padding-left:34px;
+}
+
+.ke-ul li div>a{
+    font-size:12px;
+    color: #666;
+    line-height:39px;
+    height:36px;
+    width:100%;
+    display: inline-block;
+}
+.ke-ul li div:hover>a{
+    color: #35b458;
+    font-size:13px;
+    border-right:3px solid #fff;
+    
+    padding-left:25px;
+    width:181px;
+    background-color: #fff;
+    z-index:1000;
+    position: absolute;
+    left:1px;
+}
+.tabin{
+    font-size:13px;
+    color: #35b458;
+}
+/*左侧菜单切换显示*/
+.ke-ul li div div.menu-show{
+    min-width:388px;
+    max-width:388px;
+    min-height:419px;
+    /*height:100%;删除高度100%就可以撑开了*/
+    border:1px solid #e2e2e2;
+    background-color: #fff;
+    position:absolute;
+    top:-46px;
+    left:206px;
+    z-index:700;
+    -webkit-box-shadow: 0 0 1px #f0f0f0;
+    -moz-box-shadow: 0 0 1px #f0f0f0;
+    box-shadow: 0 0 1px #f0f0f0;
+
+    padding-left:10px;
+    padding-top:5px;
+    display: none;
+}
+.menu-show dl{
+    margin-top:11px;
+}
+.menu-show dl dt{
+    margin-left:5px;
+    padding-bottom:3px;
+    border-bottom:1px solid #f4f4f4;
+    clear: both;
+}
+.menu-show dl dt a{
+    font-size:14px;
+    color: #333;
+}
+.menu-show dl dd{
+    margin-top:-3px;
+    margin-bottom:22px;
+    clear: left;
+    display: inline-block;
+}
+.menu-show dl dd a{
+    font-size:13px;
+    color: #666;
+    margin-top:12px;
+    display: inline-block;
+    float: left;
+    padding:0 7px;
+    border-right:1px solid #e2e2e2;
+}
+.menu-show dl dd a:last-child,
+.menu-show .border-no{
+    border-right:0;
+}
+.menu-show dl a:hover{
+    color: #35b458;
+}
+
+.ke-ul li div div.show{
+    display: block;
+}
+
+.other a{
+    display: block;
+    width:100%;
+    height:45px;
+    font-size:14px;
+    color: #000;
+}
+.other a:hover{
+    color: #35b558;
+    background: #fafafa url(http://s1.jikexueyuan.com/common/images/img-seeall_b965178.png) no-repeat 160px center;
+    background-size: 40px 10px;
+}
+.other a span{
+    line-height:45px;
+}
+.other a i{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+    margin-left:12px;
+    vertical-align: text-bottom;
+}
+.other a i.job-icon{
+    background: url(http://s1.jikexueyuan.com/common/images/icon-zylj_6ee6dac.png) no-repeat left center;
+    background-size: 15px 14px;
+}
+.other a i.zhishi-icon{
+    background: url(http://s1.jikexueyuan.com/common/images/icon-zstx_a1ae096.png) no-repeat left center;
+    background-size: 15px 12.5px;
+}
+.other a i.ke-icon{
+    background: url(http://s1.jikexueyuan.com/common/images/icon-xlkc_2e47588.png) no-repeat left center;
+    background-size: 14px 14px;
+}
+.other a i.tag-icon{
+    background: url(http://s1.jikexueyuan.com/common/images/icon-kcbq_65534c2.png) no-repeat left center;
+    background-size: 15px 13px;
+}
+
+/*主要内容*/
+
+.contain .main{
+    width:776px;
+    float: right;
+    margin-bottom:38px;
+}
+.main .main-head{
+    width:776px;
+    height:38px;
+    background-color: #fff;
+    position: relative;
+}
+
+.main-head ul li{
+    padding:0 18px;
+    height:38px;
+    font-size:12px;
+    color: #666;
+    line-height:41px;
+    cursor: default;
+    position: relative;
+}
+
+.main-head .main-h-first{
+    border-right:1px solid #f6f6f6;
+    padding:0 22px;
+}
+.main-head ul li i {
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    border: 1px solid #888;
+    border-top: 0;
+    border-left: 0;
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+    margin-bottom:2px;
+    margin-left:2px;
+    
+}
+.main-head ul li .toggle{
+    width:73px;
+    background-color: #fff;
+    margin:0;
+    position: absolute;
+    top:38px;
+    left:0;
+    display: none;
+    z-index:699;
+}
+.tog2{
+    width:97px !important;
+}
+.main-head .toggle p{
+    margin:0;
+    height:38px;
+
+}
+.main-head .toggle p a{
+    padding:0 18px;
+    height:100%;
+    width:100%;
+    box-sizing:border-box;
+    display: inline-block;
+    color: #666;
+}
+.main-head .main-hover:hover{
+    padding:0 18px;
+    height:114px;
+    -webkit-box-shadow: 1px -1px 5px 1px #e2e2e2;
+    -moz-box-shadow: 1px -1px 5px 1px #e2e2e2;
+    box-shadow: 1px -1px 5px 1px #e2e2e2;
+}
+.main-head .hover-height:hover{
+    height:152px;
+}
+.main-head .ke-hover:hover{
+    height:190px;
+}
+
+.main-head .main-hover:hover i{
+    visibility:hidden;
+}
+.main-hover:hover .toggle{
+    display: block;
+    
+}
+.main-hover .toggle a:hover{
+    color: #35b458;
+}
+/*设置风格列表图标*/
+.main-set-icon{
+    display: inline-block;
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+#main-image,
+#main-list{
+    width:36px;
+    height:38px;
+    float: left;
+    text-align: center;
+    border-left:1px solid #f0f0f0;
+    cursor: pointer;
+}
+#main-image i{
+    width: 14px;
+    height:100%;
+    background: url(http://s1.jikexueyuan.com/course/images/icon-kuai_3c1a8cf.png) no-repeat center;
+    background-size: 14px;
+    display: inline-block;
+}
+#main-list i{
+    width: 19px;
+    background: url(http://s1.jikexueyuan.com/course/images/icon-list_6d9f87f.png) no-repeat center;
+    background-size: 16px 12px;
+    display: inline-block;
+    height:100%;
+}
+/*课程内容*/
+.main .lesson-list{
+    width:776px;
+    height:100%;
+    margin-top:14px;
+}
+.lesson-list .list-ul li{
+    width:250px;
+    height:225px;
+    margin-right:13px;
+    margin-bottom:13px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+.lesson-list .list-ul li:nth-child(3n){
+    margin-right:0;
+}
+.lesson-list .list-ul li .lessonimg-box{
+    width:250px;
+    height:135px;
+    position: relative;
+}
+.lesson-list li:hover .lessonimg-box .shoucang{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    background: url(http://s1.jikexueyuan.com/common/images/shoucang-1_76dc56f.png);
+    background-size: 16px 16px;
+    z-index: 101;
+    cursor: pointer;
+}
+.lesson-list .lessonimg-box .lessonimg{
+    width:250px;
+    height:135px;
+}
+.lesson-list .lessonimg-box a .lesson-play{
+    width:100%;
+    height:135px;
+    position: absolute;
+    top:0;
+    background-color: rgba(0,0,0,.4);
+    display: block;
+    opacity:0;
+
+    -webkit-transition: opacity 0.5s;
+    -moz-transition:  opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.lesson-list .lessonimg-box .playericon{
+    position: absolute;
+    z-index: 120;
+    width: 50px;
+    height: 50px;
+    
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+    background: url(http://s1.jikexueyuan.com/common/images/player_icon_5c67475.png) 0 0 no-repeat;
+    cursor: pointer;
+    background-size: 50px 50px;
+    opacity:0;
+    display: block;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition:  opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+li:hover .lessonimg-box a .lesson-play{
+    opacity:1;
+}
+li:hover .lessonimg-box .playericon{
+    opacity:1;
+
+}
+
+.lesson-list .list-ul .lesson-info{
+    min-height:68px;
+    padding: 10px;
+    position: relative;
+    z-index: 200;
+    overflow: hidden;
+    background: #fff;
+    /*-webkit-box-sizing: border-box;*/
+    /*-moz-box-sizing: border-box;*/
+    /*box-sizing: border-box;*/
+}
+.lesson-list .lesson-info h2{
+    font-size: 14px;
+    color: #333;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    font-weight:normal;
+
+}
+.lesson-list .lesson-info h2 a{
+    color: #333;
+}
+.lesson-list .lesson-info p{
+    color: gray;
+    font-size: 12px;
+    line-height: 18px;
+    height: 52px;
+    margin-bottom:0;
+    display: none;
+
+}
+.lesson-list .timeandicon dl{
+    width:120px;
+    float: left;
+}
+.lesson-list .timeandicon dl dd{
+    font-size:12px;
+    color: gray;
+    margin-top:12px;
+}
+
+.lesson-list .timeandicon dl dd .time-icon{
+    background: url(http://s1.jikexueyuan.com/common/images/clok_a413ecf.png) 0 0 no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+    background-size: 14px 14px;
+}
+.lesson-list .timeandicon dd .jibie-icon{
+    background: url(http://s1.jikexueyuan.com/common/images/one-ji_1731712.png) 0 0 no-repeat;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+.lesson-list .jibie-icon3{
+    background: url(http://s1.jikexueyuan.com/common/images/three-ji_b588ab1.png) 0 0 no-repeat;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+.lesson-list .timeandicon .jibie{
+    display: none;
+}
+.lesson-list .timeandicon .peoples{
+    width:80px;
+    float:right;
+    font-size:12px;
+    color: gray;
+    text-align: right;
+}
+.lesson-list .timeandicon .peoples div a img{
+    width:16px;
+    height:16px;
+}
+.lesson-list .timeandicon .peoples div{
+    margin-top:12px;
+}
+.lesson-list .peoples .renshu{
+    display: none;
+}
+
+/*课程库横条风格*/
+.lesson-list2{
+    width:776px;
+    height:100%;
+}
+.lesson-list2 ul li{
+    width:776px;
+    height:100px;
+    margin-top:14px;
+    padding-right:11px;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+.lesson-list2 ul li:hover .shoucang{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    background: url(http://s1.jikexueyuan.com/common/images/shoucang-1_76dc56f.png);
+    background-size: 16px 16px;
+    z-index: 101;
+    cursor: pointer;
+}
+.lesson-list2 .lessonimg-box .shoucang:hover {
+    background: url(http://s1.jikexueyuan.com/course/images/shoucang-2_3d597dc.png);
+    background-size: 16px 16px;
+}
+.lesson-list2 ul li .lesson-play{
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,.4);
+    position: absolute;
+    top:0;
+    left:0;
+    display: block;
+    opacity:0;
+
+    -webkit-transition: opacity 0.5s;
+    -moz-transition:  opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.lesson-list2 ul li .playericon{
+    position: absolute;
+    z-index: 120;
+    width: 50px;
+    height: 50px;
+
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+    background: url(http://s1.jikexueyuan.com/common/images/player_icon_5c67475.png) 0 0 no-repeat;
+    cursor: pointer;
+    background-size: 50px 50px;
+    opacity:0;
+    display: block;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition:  opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.lesson-list2 .lessonimg-box{
+    width:185px;
+    height:100px;
+    float: left;
+    position: relative;
+}
+.lesson-list2 .lessonimg-box img{
+    width:185px;
+    height:100px;
+}
+.lesson-list2 .lesson-info{
+    height:88px;
+    width:566px;
+    float: right;
+    position: relative;
+}
+.lesson-list2 h2{
+    font-weight:400;
+    margin:5px 0;
+    padding-top:2px;
+
+}
+.lesson-list2 .lesson-info p{
+    height:36px;
+    margin:5px 0;
+    font-size:12px;
+    color: gray;
+}
+.lesson-list2 h2 a{
+    color: #333;
+    font-size:14px;
+    display: block;
+}
+.lesson-list2 h2 a:hover{
+    color: #35b458;
+}
+.lesson-list2 .timeandicon dd{
+    font-size:12px;
+    color: gray;
+    display: inline-block;
+    margin-right:10px;
+}
+.lesson-list2 .timeandicon dd i{
+    width:14px;
+    height:14px;
+    display: inline-block;
+    -webkit-background-size:14px 14px;
+    margin-right:3px;
+    margin-bottom:-2px;
+}
+.lesson-list2 .playtime .time-icon{
+    background: url(http://s1.jikexueyuan.com/common/images/clok_a413ecf.png) 0 0 no-repeat;
+    background-size:14px 14px;
+}
+.lesson-list2 .jibie .jibie-icon{
+    background: url(http://s1.jikexueyuan.com/common/images/one-ji_1731712.png) 0 0 no-repeat;
+    background-size: 14px 14px;
+}
+
+.lesson-list2 .peoples{
+    position: absolute;
+    right:0;
+    top:3px;
+    width:110px;
+}
+.lesson-list2 .peoples .renshu{
+    display: inline;
+    font-size:12px;
+    color: gray;
+    position: absolute;
+    right:0;
+    top:74px;
+}
+.lesson-list2 .peoples a img{
+    width:16px;
+    height:16px;
+    float: right;
+    margin-top:3px;
+}
+
+
+
+/*底部*/
+footer{
+    width:100%;
+    height:100%;
+    background-color: #fff;
+    margin-bottom:0;
+    clear: both;
+}
+.info{
+    width:1000px;
+    height:215px;
+    margin:20px auto;
+    background-color: transparent;
+    padding-top:20px;
+}
+.foot_logo{
+    width:160px;
+    height:77px;
+    margin-right:70px;
+    padding-bottom:130px;
+    font-size:12px;
+    color: #a8a8a8;
+    float: left;
+}
+.foot_logo img{
+    width:109px;
+    height:40px;
+}
+.info dl{
+    float: left;
+    margin-top:8px;
+}
+.info dl dt,.info dl dd{
+    width:135px;
+    height:30px;
+    margin-left:0;
+}
+.info dl dt{
+    font-size:14px;
+    color: #909090;
+}
+.info dl dd a{
+    font-size:12px;
+    color: #a8a8a8;
+}
+
+.phone{
+    width:175px;
+    height:119px;
+    float: right;
+}
+.phone p{
+    font-size: 14px;
+    color: #898989;
+    margin-top:1px;
+    margin-bottom:27px;
+}
+.phone div{
+    width:140px;
+    height:30px;
+    border:1px solid #dddddd;
+    margin-bottom:12px;
+}
+.phone div img{
+    width:30px;
+    height:30px;
+    margin-right:10px;
+}
+.phone div span{
+    font-size:14px;
+    color: #8c8c8c;
+    vertical-align: 8px;
+}
+.copyright{
+    width:1000px;
+    font-size:12px;
+    color: #a3a3a3;
+    text-align: center;
+    margin:0 auto;
+    border-top:1px solid #dddddd;
+    margin-top:-18px;
+}
+.copyright img{
+    width:60px;
+}
+
+
+/*返回顶部*/
+.fixed{
+    width:34px;
+    height:100px;
+    position: fixed;
+    bottom:50px;
+    left:1188px;
+    z-index:900;
+}
+.fixed .gotop{
+    display: block;
+    background: url(http://e.jikexueyuan.com/headerandfooter/images/gotop.jpg) 0 0 no-repeat;
+    background-size: 34px 103px;
+    width: 34px;
+    height: 34px;
+    margin-bottom:5px;
+    cursor: pointer;
+}
+.fixed .gotop:hover{
+    background: url(http://e.jikexueyuan.com/headerandfooter/images/gotop2.jpg) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 34px 103px;
+    -webkit-background-size: 34px 103px;
+    -moz-background-size: 34px 103px;
+}
+.fixed .imgfirst{
+    width:15px;
+    height:30px;
+    margin-left:9px;
+}
+.fixed .app{
+    position: relative;
+}
+.fixed .app:hover .app-download{
+    display: block;
+}
+
+.fixed .app-download{
+    background: url(http://e.jikexueyuan.com/headerandfooter/images/appewm.png) center center no-repeat;
+    background-size: 100%;
+    width: 126px;
+    height: 159px;
+    position: absolute;
+    left: -126px;
+    top: -70px;
+    display: none;
+}
+.fixed img:last-child{
+    width:100%;
+    height:34px;
+}
+
+/*翻页*/
+.main .page-nav{
+    width:776px;
+    height:28px;
+    margin-top:18px;
+    font-size:12px;
+}
+.page-nav ul.pages{
+    width:756px;
+    height:35px;
+    margin:0 auto;
+    display: block;
+}
+.page-nav .pages li{
+    height:32px;
+    padding:0 12px;
+    margin-right:7px;
+    background-color: #fff;
+    line-height:34px;
+
+}
+.pages li.pg-first,
+.pages li.pg-previous{
+    padding:0 14px;
+}
+.page-nav .pages .empty{
+    color: #c6cad0;
+}
+
+.page-nav .pg-number:hover,
+.pg-next:hover,
+.pg-last:hover,
+.true:hover{
+    border:1px solid #35b458;
+    color: #35b458;
+}
+.page-nav .pg-number,
+.pg-next,
+.pg-last,
+.true{
+    cursor: pointer;
+    border:1px solid #e2e2e2;
+    color: gray;
+}
+.pages li.pg-last-child{
+    margin-right:2px;
+}
+
+.page-nav li.pg-current,
+.page-nav li.pg-current:hover{
+    color: #fff;
+    background-color: #35b458;
+    border:1px solid #e2e2e2;
+}
+
+.pages li.pg-more{
+    background-color: transparent!important;
+    padding:0 7px;
+    margin-right:1px;
+}
+
+.pages li.pg-more .pg-input{
+    width:22px;
+    padding-left:5px;
+}
+.page-nav .pages li.true{
+    margin:0;
+    padding: 0 5px;
+}
