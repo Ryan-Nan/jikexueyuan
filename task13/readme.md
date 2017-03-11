@@ -1,8 +1,15 @@
 # 学习Git笔记
-### 分支管理
+## 分支管理
+### 创建与合并分支
 #### 查看分支：`git branch`
 #### 创建分支：`git branch <name>`
 #### 切换分支：`git checkout <name>`
 #### 创建+切换分支：`git checkout -b <name>`
 #### 合并某分支到当前分支：`git merge <name>`
 #### 删除分支：`git branch -d <name>`
+### 解决冲动
+master分支和name分支各自都分别有新的提交，这种情况下，Git无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并会有冲突.
+
+当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
+#### 查看分支图：`git log --graph --pretty=oneline --abbrev-commit`
+
