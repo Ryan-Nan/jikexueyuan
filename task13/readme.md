@@ -35,7 +35,11 @@ tag标签就是让人很容易记住而且有意义的名字，它跟某个commi
 
 
 ### 操作标签
-
+小结
+* 命令`git push origin <tagname>`可以推送一个本地标签；
+* 命令`git push origin --tags`可以推送全部未推送过的本地标签；
+* 命令`git tag -d <tagname>`可以删除一个本地标签；
+* 命令`git push origin :refs/tags/<tagname>`可以删除一个远程标签。
 
 
 
