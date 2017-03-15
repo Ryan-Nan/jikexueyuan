@@ -41,11 +41,8 @@ tag标签就是让人很容易记住而且有意义的名字，它跟某个commi
 * 命令`git tag -d <tagname>`可以删除一个本地标签；
 * 命令`git push origin :refs/tags/<tagname>`可以删除一个远程标签。
 
-
-
-
-
-
+- - -
+[学习来自Git教程-廖雪峰的官方网站](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 
 
