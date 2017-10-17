@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" data-ng-app="ionicApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东Store</title>
+    <link rel="stylesheet" href="lib/ionic/css/ionic.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="lib/ionic/js/angular/angular.min.js"></script>
+
+</head>
+
+<body data-ng-controller="myCtrl">
+
+<ion-content>
+    <div class="app-wrap">
+        <div class="header" ng-if="goodsChecked.length > 0">
+            <div class="location">
+                <span class="ion-ios-location-outline"></span>
+                <span></span>
+            </div>
+
+            <!--头部导航-->
+            <div class="selectGoods">
+                <select class="select-box" ng-init="selectbox" ng-disabled="selectbox">
+                    <option value="" selected>全部商品</option>
+                    <option value="">降价商品</option>
+                    <option value="">促销优惠商品</option>
+                    <option value="">库存紧张商品</option>
+                    <option value="">京东超市商品</option>
+                </select>
+            </div>
+            <div class="header-edit">
+
+                <span class="btn" id="share">
+                    <span>分享</span>
+                </span>
+                <span class="btn" id="editbtn" >
+                    <span ng-click="Edit()">{{toggleEdit}}</span>
+                </span>
+            </div>
+
+        </div>
+        <!--京东自营-->
+        <div class="jingdong" ng-if="goodsChecked.length>0">
+            <div class="jing__iconwarp">
+                <ion-checkbox ng-checked="checkedVar" class=" checkbox-balanced jing__jw--bottom"></ion-checkbox>
+
+            </div>
+            <span>JD 京东自营</span>
+        </div>
+
+        <div id="addShopcar">
+            <ion-list ng-repeat="item in goodsChecked">
+                <ion-item >
+                    <div class="goods">
+                        <div class="icon-select">
+                            <ion-checkbox ng-checked="item.checked" ng-model="item.checked" ng-click="selectSingle(item)" class="checkbox-balanced icon-select--middle"></ion-checkbox>
+                        </div>
+                        <a href="">
+                            <div class="goods__img">
+                                <img src="{{item.imgSrc}}" alt="">
+                            </div>
+                            <div class="goods__content">
+                                <div class="goods__c__name">
+                                    {{ item.text }}
+                                </div>
+                                <div class="price goods--tiaozhen">
+                                    ￥
+                                    <em>{{ item.price.whole}}</em>
+                                    <span>{{ item.price.smallNum}}</span>
+                                    <i class="heavy">{{ item.heavy}}</i>
+                                </div>
+                                <div class="goods__count">
+                                    <span class="minus" ng-disabled="item.isDisabled" ng-click="minus(item)"></span>
+                                    <input type="text" class="num" value="{{item.quantity}}">
+                                    <span class="plus" ng-click="plus(item)"></span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <ion-option-button class="button-assertive" ng-click="singleDel(item)">
+                        删除
+                    </ion-option-button>
+                    <ion-option-button class="button-dark">
+                        移至收藏
+                    </ion-option-button>
+                </ion-item>
+
+
+            </ion-list>
+        </div>
+
+        <div class="shop-car" ng-hide="goodsChecked.length>0">
+            <i class="information-outline"></i>
+            <p class="title">您的购物车内还没有商品！</p>
+            <div class="buttons">
+                <a href="#" class="btn-person">个人中心</a>
+                <a href="#" class="btn-guang">立即逛逛</a>
+            </div>
+        </div>
+
+        <div class="title-want">
+            <span><i class="t-icon-position"></i> 你可能还想要 </span>
+        </div>
+
+        <div class="lists" >
+            <ul>
+                <li ng-repeat="item in goods">
+                    <a href="#">
+                        <div class="lists-img">
+                            <img src={{item.imgSrc}} alt="">
+                        </div>
+                        <p class="lists-name">
+                            {{item.text}}
+                        </p>
+                        <div class="lists-warp">
+                            <div class="price">
+                                ￥
+                                <em>{{item.price.whole}}</em>
+                                <span>{{item.price.smallNum}}</span>
+                            </div>
+                            <div class="lists-w-buy" ng-click="Buy(item)"></div>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+</ion-content>
+
+    <ion-footer-bar class="footer" id="footer" ng-if="goodsChecked.length>0">
+        <div class="all-select">
+            <ion-checkbox ng-checked="selectAll" ng-model="selectAll" ng-click="allSelect()" class=" checkbox-balanced"></ion-checkbox>
+            <p>全选</p>
+        </div>
+
+        <div class="submit" ng-show="calculates">
+            <div class="total">
+                <p class="total-tt">总计：<em>￥{{totalValue | number:2}}</em></p>
+                <p class="total-freight">(不含运费，已优惠￥0.00)</p>
+            </div>
+            <div class="footer-buttons">
+                <button class="button button-assertive" ng-disabled="totalValue == 0"><em>去结算</em>({{totalquantity}}件)</button>
+            </div>
+        </div>
+
+        <div class="two-btn" ng-hide="footerTwoBtn">
+            <div class="delete" ng-click="delShopcar()">删除</div>
+            <div class="shoucang">移至收藏</div>
+        </div>
+
+    </ion-footer-bar>
+
+
+
+
+<script src="js/index.js"></script>
+
+
+</body>
+</html>

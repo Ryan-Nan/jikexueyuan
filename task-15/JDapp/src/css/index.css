@@ -1,0 +1,503 @@
+html{
+    background-color: #e8e8ed;
+    font-size:10px;
+}
+body{
+    margin: 0 auto!important;
+    min-width: 320px;
+    max-width: 540px;
+    background: transparent;
+}
+a{
+    text-decoration: none;
+}
+p{
+    padding:0;
+    margin:0;
+}
+ion-list,
+ion-item{
+    background: #fff;
+}
+.app-wrap{
+    max-width:540px;
+    margin: 0 auto;
+}
+/*Header*/
+.header{
+    width:100%;
+    height: 45px;
+    padding: 0 10px;
+    line-height:45px;
+    font-size: 14px;
+    text-align: center;
+    background: #f2f2f7;
+}
+.location{
+    display: inline-block;
+    width:50px;
+    float: left;
+    text-align: left;
+}
+.selectGoods{
+    display: inline-block;
+
+}
+.select-box{
+    width:80%;
+    height:30px;
+    font-size: 12px;
+    border: 0;
+}
+.select-box option{
+    border: 0;
+}
+.header-edit{
+    float: right;
+}
+.btn{
+    display: block;
+    float: right;
+    height:100%;
+    padding-left:10px;
+    color: #3d7ae6;
+    
+}
+/* End Header */
+
+/*京东自营*/
+.jingdong{
+    height:45px;
+    width: 100%;
+    position: relative;
+    line-height:45px;
+    border-bottom: 1px solid #efefef;
+    background: #fff;
+}
+.jing__iconwarp{
+    height:45px;
+    width: 42px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+.jingdong .jing__jw--bottom{
+    position: absolute;
+    top:13px;
+}
+/* End 京东自营*/
+
+/*购物清单*/
+#addShopcar{
+    background: #fff;
+}
+.goods{
+    min-height: 75px;
+    padding: 15px 10px 15px 128px;
+    position: relative;
+    border-bottom: 1px solid #efefef;
+}
+.icon-select{
+    height: 100%;
+    width: 63px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:1;
+}
+.icon-select--middle{
+    padding-top: 89px!important;
+    overflow: visible;
+}
+.icon-select--middle:before{
+    content: '';
+    height:50%;
+    width:1px;
+    position: absolute;
+    top: -5px;
+    left:22px;
+    background: #efefef;
+}
+/*强制调整布局，排除ionic.css影响*/
+#addShopcar .item-content{
+    padding: 0;
+}
+.goods__img{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 43px;
+    top: 15px;
+    text-align: center;
+
+}
+.goods__img img{
+    height: 75px;
+    width: 75px;
+    margin-top: 2.5px;
+}
+.goods__c__name{
+    height:36px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 10px;
+    text-align: left;
+    color: #262626;
+    line-height:18px;
+}
+.goods--tiaozhen{
+    margin: 6px 0;
+    width: 100%;
+}
+div.goods--tiaozhen>span,
+div.goods--tiaozhen>em{
+
+    margin-left: 2px;
+}
+
+.heavy{
+    color: #7c7c7c;
+    margin-left: 9px;
+}
+.goods__count{
+    clear: both;
+    margin-top:5px;
+    height:30px;
+}
+.minus,
+input.num,
+.plus{
+    float: left;
+    border: 1px solid #e7e7e7;
+
+}
+.minus,
+.plus{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    -webkit-background-size:18px;
+    background-size:18px;
+    background-position: center center;
+}
+input.num{
+    width:40px;
+    height: 30px;
+    border-left: 0;
+    border-right: 0;
+    text-align: center;
+    font-family:inherit;
+}
+.minus{
+    background-image: url(../img/jiajian-01.svg);
+}
+.plus{
+    background-image: url(../img/jiajian-02.svg);
+}
+/*空的购物车*/
+.shop-car{
+    width:100%;
+    height: 208px;
+    background-color: #fff;
+    margin:0!important;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.title{
+    font-size:1.2rem;
+    text-align: center;
+    color: #6e6e6e;
+    padding-top:5px;
+}
+i.information-outline{
+    background-image: url('../img/ios-information-outline.png') ;
+    background-repeat:no-repeat;
+    background-position: center bottom;
+    display: block;
+
+    width: 100%;
+    height: 112px;
+}
+
+/*两个按钮链接*/
+.buttons{
+    display: flex;
+    margin:15px 10px;
+}
+.buttons a{
+    display: inline-block;
+    height:44px;
+    border:1px #e8e8ed solid;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius: 3px;
+    color: #333;
+
+    background: #f3f3f3;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex:1;
+
+    text-align: center;
+    line-height:42px;
+}
+
+.buttons .btn-guang{
+    margin-left:9px;
+}
+
+/*end shop car*/
+
+
+/*中间文字*/
+.title-want{
+    width: 100%;
+    height: 40px;
+    margin: 15px auto 5px;
+    text-align: center;
+
+}
+.title-want span{
+    padding:2px 6px 0 20px;
+    margin-left: 6px;
+    position: relative;
+    line-height:40px;
+}
+.title-want:before,
+.title-want:after{
+    content: ' ————— ';
+    color: #a3a3a3;
+
+}
+.t-icon-position{
+    display: inline-block;
+    width:16px;
+    height:22px;
+
+    position: absolute;
+    top:-1px;
+    left:0;
+    color: #262626;
+    background-image: url(../img/position.svg);
+    background-repeat:no-repeat;
+    -webkit-background-size:1.2em 1.9em;
+    background-size:1.2em 1.9em;
+}
+
+/* End 中间文字*/
+
+
+/*goods lists*/
+.lists{
+    width: 100%;
+    
+}
+.lists ul{
+    list-style-type: none;
+}
+
+.lists ul li{
+    display: list-item;
+    margin-top: 4px;
+    float: left;
+    width: 49.52%;   /*商品效果图 =（整个设备宽度-中间空间4px）/ 2,商品效果图/整个设备宽度 * % */
+    background-color: #fff;
+}
+.lists-img{
+    position: relative;
+    padding-top:100%;
+    height: 0;
+    overflow: hidden;
+}
+.lists-img img{
+    display: block;
+    width:100%;
+    height:auto;
+    position: absolute;
+    top:0;
+    left:0;
+
+}
+.lists-name{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding:0 10px;
+    margin:5px 0;
+    height:3em;
+    line-height:1.5em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: #333;
+    font-size: .7em;
+}
+.lists-warp{
+    height:36px;
+    margin-bottom:7px;
+    padding: 0 10px;
+    line-height: 35px;
+}
+.price{
+    float: left;
+    color: #e4393c;
+    font-size: 10px;
+
+}
+.price em{
+    font-size:1.6em;
+    margin-left:-3px;
+    font-weight: 400;
+}
+.price span{
+    margin-left:-3px;
+}
+.lists-w-buy{
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin-top:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    background-color: #e9e9e9;
+    background-image: url(../img/shopcar.svg) ;
+    background-repeat:no-repeat;
+    -webkit-background-size:18px;
+    background-size:18px;
+    background-position: 5px 6px;
+}
+.lists li:nth-child(2n){
+    float: right;
+
+}
+
+/*End goods lists*/
+
+
+/*Footer*/
+.footer{
+    height: 50px;
+    padding:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+.all-select{
+    float: left;
+    width:45px;
+    height:100%;
+    text-align: center;
+}
+.all-select p{
+    font-size:13px;
+    margin-top:25px;
+
+}
+.item-checkbox{
+    margin:0;
+    border:0;
+    position: absolute;
+    top:5px;
+    width:20px;
+    height:20px;
+    z-index:100;
+    background-color: transparent;
+}
+
+.footer-buttons{
+    position: absolute;
+    right:0;
+    height:100%;
+    width:100px;
+    padding:0 5px;
+}
+div.footer-buttons button{
+    height:100%;
+    width:100px;
+    padding:0 5px!important;
+
+}
+button.button em{
+    font-size:16px;
+    font-weight:800;
+    margin-left:-4px;
+}
+.total{
+    float: right;
+    height:50px;
+    position: absolute;
+    right:110px;
+    padding:5px 0;
+    text-align: right;
+    color: #525252;
+}
+.total-tt{
+    font-size:16px;
+    font-weight: 600;
+    margin-top:2px;
+}
+.total-tt em{
+    font-size:15px;
+    color: #d50c31;
+}
+.total-freight{
+    font-size:12px;
+    color: #6e6e6e;
+    margin-top:-2px;
+}
+
+.two-btn{
+    position: absolute;
+    right:10px;
+    height: 100%;
+
+}
+.shoucang,
+.delete{
+    margin-left:10px;
+    width:69px;
+    height:30px;
+    margin-top: 12px;
+    float: right;
+    color: #fff;
+    text-align: center;
+    line-height:30px;
+    font-size:12px;
+    font-weight:500;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+}
+.delete{
+    background: #f19325;
+}
+.shoucang{
+    background: #525252;
+}
+
+
+
+
+
+
+
+
+
+/*BEM命名方式*/
+.block{}
+.site-search{} /*块*/
+.site-search__element{}
+.block__element{}
+.block--modifier{}
